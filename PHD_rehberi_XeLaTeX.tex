@@ -1,45 +1,56 @@
 %
 %  Bilim İnsanının Amerika'da PhD'ye Başvuru Rehberi source file 
 %
-\documentclass[12pt,a4paper]{article}
+
+\documentclass[12pt,final,a4paper,twoside,openany]{book}
+\usepackage
+[ twoside, 
+  margin=3cm,
+  bindingoffset=1cm,
+  includeall ,
+  nomarginpar ,
+  ignorehead=false ,
+  ignorefoot=false ,
+  ignoremp=false ,
+  vcentering ,
+  hcentering ]
+{geometry}
+
+
 % Packages
-\usepackage[turkish]{babel}
+\usepackage{ucs} 
 %\usepackage[utf8x]{inputenc} 
 \usepackage[T1]{fontenc}
-%\usepackage{ucs} 
 \usepackage{tabularx}
-%\usepackage{cclicenses} % Creative commons
+\usepackage{cclicenses} % Creative commons
 \usepackage{hyperref}
-\usepackage[normalsections,normalindent,normalleading,normalmargins]{savetrees}
-\usepackage{fullpage}
+\usepackage[turkish]{babel}
+
+%XELATEX PACKAGES
+
 \usepackage{fontspec}
 \usepackage{xunicode}
 \usepackage{xltxtra}
 \newfontfeature{Microtype}{protrusion=default;expansion=default;}
-%\setromanfont{Linux Libertine O}
-\setromanfont[Microtype]{Garamond Premier Pro}
-%\setromanfont[Ligatures={Common, Historical, Rare}]{Cardo}
-% end of Packages
+%\usepackage[utf8]{inputenc}
+%\setromanfont{Gentium}
+%\setromanfont{Lido STF}
+\setromanfont{Crimson}
+\setsansfont{Colaborate-Regular}
+\setmonofont{Futurist Fixed-width}
 
-% new command for table of contents
+% end of Packages
 
 \setlength{\parindent}{0pt}
 \setlength{\parskip}{2ex plus 0.5ex minus 0.2ex}
 
 
-%\parindent 1cm  % paragraf girdisinin boyunu belirler
-%\parskip 0.2cm    % paragraflar arasi boslugu belirler
-\topmargin 0.15cm   % sayfa üstünde ne kadar bosluk birakilacagini belirler
-\oddsidemargin 0cm  %sayfanin sol boslugu, tek numarali sayfa
-\evensidemargin 1cm  %sayfanin sag boslugu, çift numarali sayfa
-\textwidth 16cm  %metin genisligi
-\textheight 20cm %metin yüksekligi
+%\usepackage{fullpage}
 \linespread{1} %Satir araliklarini ayarlar. özel olarak ;{\setlength{\baselineskip}
                                                         %{1.5\baselineskip}
                                                         %Bu paragraf baseline skip çarpanini
                                                        %1.5 alarak dizilmistir. Paragraf
                                                        %sonundaki komuta dikkat edin.\par}
-
 %
 % Begin
 %
@@ -50,32 +61,31 @@
 \thispagestyle{empty}
 \setcounter{page}{0}
 \begin{center}
-\textbf{\Huge{Bilim İnsanının Amerika'da PhD'ye Başvuru Rehberi} \\
+\textbf{\Huge{Bilim İnsanının Yurtdışında PhD'ye Başvuru Rehberi} \\
 \vspace{8mm}
-\Large{The Hitchhiker's Guide to Graduate School \\
+\Large{The Hitchhiker's Guide to \\ 
 \vspace{4mm}
-Applications in the US }}\\
+Graduate School Applications Outside Turkey}}\\
 
-\vspace{74mm}
-\large{Onur Albayrak} 
+\vfill
+\Large{Onur Albayrak} 
 \\
-ve
+Ahmet Demir
 \\
-Tuna Toksöz 
+Veli Uğur Güney 
 \\
-ve 
+İsmail Volkan İnlek
+\\
+Buğra Kaytanlı 
 \\
 Alp Sipahigil 
 \\
-ve 
+Tuna Toksöz 
 \\
-Uğur Güney 
+Sina Türeli 
 \\
-ve
-\\
-Buğra Kaytanlı \\
-\vspace{6mm}
-\small{
+\vspace{8mm}
+\large{
 Editör 
 \\
 Tolga Suna }
@@ -83,6 +93,7 @@ Tolga Suna }
 %
 % Lisans
 %
+\newpage
 \section*{Lisans}
 
 Bu çalışma Creative Commons Attribution-NonCommercial-Share-Alike 3.0 ile lisanslanmıstır. Bu çalışmayı kopyalamak, dağıtmak veya herhangi bir basılı veya elektronik ortamda göstermek, atıfta bulunulduğu sürece serbesttir. Bu çalışma ticari amaçla kullanılamaz. Yapılacak olan değişiklikler aynı lisans altında yapılmalıdır. 
@@ -96,7 +107,6 @@ http://creativecommons.org/licenses/by-nc-sa/3.0/legalcode
 %
 % Ithaf
 %
-\vspace*{45mm} 
 \textit{Bu rehber saygıdeğer hocamız Prof. Alpar Sevgen'e ithaf edilmiştir.}
 %
 \newpage
@@ -110,22 +120,26 @@ http://creativecommons.org/licenses/by-nc-sa/3.0/legalcode
 %
 % ONSOZ
 %
-\section{Önsöz}
-Sevgili gençler, 
+\chapter{Önsöz}
+Sevgili gençler,
 
-Bu rehberi yazma düşüncem başvuru sürecinde çekilen dertler sonrasında oluştu. Umarım bu rehber hepinizin işine yarar ve güzel yerlere kabul alırsınız. Daha eklenecek birçok şey olabilir. Aklıma geldikçe ve/veya kabulünü almış, eleğini asmış gençler rehbere eklemeler yaparsa ne güzel olur. Metin düzenlemelerini yapan kadim dostum Tolga Suna'ya da teşekkür ediyorum. Hepinizi sevgi ve saygı ile selamlıyor, şimdiden başarılar ve iyi şanslar diliyorum. 
+Bu rehberi yazmak başvuru sürecindeki tecrübelerim –daha doğrusu dertlerim- sonrasında akılma geldi. Umarım bu rehber hepinizin işine yarar ve güzel yerlere kabul alırsınız. Daha eklenecek birçok şey olabilir. Biz yaşadıklarımızla paralel aklımıza gelen her şeyi yazmaya çalıştık. Aklımıza geldikçe de eklemeler yapmaya devam edeceğiz. Hatta kabulünü almış, eleğini asmış gençler de rehbere eklemeler yaparlarsa ne güzel olur. Metin düzenlemelerini yapan kadim dostum Tolga Suna’ya da ayrıca teşekkür ediyorum. Hepinizi sevgi ve saygıyla selamlıyor, şimdiden başarılar ve iyi şanslar diliyorum. \textit{Ağustos, 2010}
+
+İki arkadaşımız daha aramıza katıldı. Yazdıkları Fizik GRE testi için çalışma teknikleri bölümüyle rehbere katkıda bulundular. Bu bölümün fizik öğrencilerinin işine yarayacağına eminiz. \textit{Mayıs, 2011}
+
+Rehbere en son olarak Avrupa'ya başvuru taktiklerini ekledik. Avrupa başvuruları \c Amerika'ya g\"ore farklı olduğu i\c cin bir \c cok ogrencinin işine yarayacaktır. \textit{Eylül, 2011}
+
 
 \noindent OA \\
-Ağustos, 2010 \\
+
 
 \noindent Sevgili gençler, 
 
-Bu rehberi yazma düşüncem vardı fakat Onur benden önce davranıp başlamış bile. Özellikle başvuru aşamasında, başvuru sonrasında okulun istedikleri belgeler ve Türkiye'den ayrılmadan yapılması gereken işler konusunda size yardımcı olacak bu kaynağı hazırlamak için kolları sıvadık. Bu doküman her ne kadar Amerika eksenli olsa da, içeriğin büyük bir kısmının Kanada, Avrupa, Avustralya, Uzak Doğu ve Mars'taki üniversiteler için de geçerli olduğunu düşünüyoruz. Bu yol çetin fakat bir o kadar da eğlenceli bir yol. Hepinize bol şanslar.   
+Bu rehberi yazma düşüncem vardı fakat Onur benden önce davranıp başlamış bile. Özellikle başvuru aşamasında, başvuru sonrasında okulun istedikleri belgeler ve Türkiye’den ayrılmadan yapılması gereken işler konusunda size yardımcı olacak bu kaynağı hazırlamak için kolları sıvadık. Bu doküman her ne kadar Amerika eksenli olsa da, içeriğin büyük bir kısmının Kanada, Avrupa, Avustralya, Uzak Doğu ve Mars’taki üniversiteler için de geçerli olduğunu düşünüyoruz. Bu yol çetin fakat bir o kadar da eğlenceli bir yol. Hepinize bol şanslar! \textit{Ağustos, 2010}
 
-\noindent TT \\
-Ağustos, 2010 \\
+\noindent TT  
 
-\textit{Not: Çeşitli kısımlar, çeşitli kişiler tarafından yazıldığından birinci tekil konuşmalar sizleri şaşırtabilir. Bu rehberde yazılanlar tamamen yazarların düşünce\-leridir. İşverenlerin görüşlerini yansıtmaz. Rehberdeki içeriğin kullanımından doğabilecek zararlardan yazarlar sorumlu değildir. Bu rehberdekiler bir tavsiye niteliğinde alınmalıdır.
+\textit{Not: Çeşitli kısımlar, çeşitli kişiler tarafından yazıldığından birinci tekil konuşmalar sizleri şaşırtabilir. Bu rehberde yazılanlar tamamen yazarların düşünceleridir. İşverenlerin görüşlerini yansıtmaz. Rehberdeki içeriğin kullanımından doğabilecek zararlardan yazarlar sorumlu değildir. Bu rehberdekiler bir tavsiye niteliğinde alınmalıdır.
 Rehberin en güncel haline \href{https://github.com/yurtdisiphdrehberi/yurtdisiphdrehberi/}{bu adresten} ulaşabilirsiniz.}
 
 \newpage
@@ -136,137 +150,151 @@ Rehberin en güncel haline \href{https://github.com/yurtdisiphdrehberi/yurtdisip
 
 Onur Albayrak, \textit{Carnegie Mellon University - Physics }
 
-Tuna Toksöz, \textit{Massachusetts Institute of Technology - Aeronautics and Astronautics }
+Ahmet Demir, \textit{Massachusetts Institute of Technology - Physics}
+
+Veli Uğur Güney, \textit{City University of New York - Physics }
+
+İsmail Volkan İnlek, \textit{University of Maryland, Physics}
+
+Buğra Kaytanlı, \textit{University of California, Santa Barbara - Mechanical Engineering}
 
 Alp Sipahigil, \textit{Harvard University - Physics }
 
-Uğur Güney, \textit{City University of New York - Physics }
+Tuna Toksöz, \textit{Massachusetts Institute of Technology - Aeronautics and Astronautics }
 
-Buğra Kaytanlı, \textit{University of California, Santa Barbara - Mechanical Engineering}
+Sina Türeli, \textit{International School for Advanced Studies (SISSA), Trieste - Mathematical Physics}
+
 \newpage
 %
 % Yaz stajlari, Bugra
 %
-\section{2-3. Sınıflarda Araştırma ve Yaz Stajları}
-Bu kitapçığın ileri bölümlerinde arkadaşlarım, başvuru sürecinde çok önemli olduğuna inandığmız konulara değiniyorlar. Ben de bunlara ek olarak dördün\-cü sınıfa gelmeden önce yapılabilecek hazırlıklardan bahsedeceğim.
+\chapter{2. ve 3. Sınıflarda Araştırma ve Yaz Stajları}
+Bu kitapçığın ileri bölümlerinde arkadaşlarım, başvuru sürecinde çok önemli olduğuna inandığımız konulara değiniyorlar. Ben de bunlara ek olarak dördüncü sınıfa gelmeden önce yapılabilecek hazırlıklardan bahsedeceğim. PhD’ye kabul almak için gerekli en temel üç yatırım unsuru vardır: GPA, recommendation letter’lar ve prior research experience denilen şey yani stajlar, workshop’lar vesaire. Bu kitapçığı okuyorsanız zaten derslerinize geçen iki - üç yıl boyunca gayet sıkı çalışmış notlarınızı yüksek tutmuşsunuzdur ki, şu sıralarda PhD yapma fikri aklınızdan geçiyordur. O yüzden GPA kısmını atlayıp geri kalan iki kısımla ilgili birkaç noktaya değineceğim.
 
-Phd’ye kabul almak için gerekli en temel üç yatırım unsuru vardır: GPA, “recommendation letter”lar ve “prior research experience” denilen şey yani stajlar, “workshop”lar vesaire. Bu kitapçığı okuyorsanız zaten derslerinize geçen iki-üç yıl boyunca gayet sıkı çalışmış notlarınızı yüksek tutumuşsunuzdur ki, şu sıralarda  PhD yapma fikri aklınızdan geçiyordur. O yüzden GPA kısmını atlayıp, geri kalan iki kısımla ilgili birkaç noktaya değineceğim.
 
-\subsection{Tavsiye Mektubunun İçinin Doldurulması}
-Hocalardan tavsiye mektubu istemek, hocaların seçimi, “nasıl söylesem” dertleri her birimizin en az birkaç gece uykularını kaçırmıştır. Nitekim uykularımız boşa kaçmamıştır çünkü tavsiye mektubu mühim bir iştir. Mektupları isteyeceğiniz hocalarınızı sizi (mümkünse kişiliğinizi de) en iyi tanıdığına inandığınız hocalarınızdan seçmeniz faydalı olacaktır. Mesela dersine hiç aksatmadan gittiğiniz ve sonunda sınıftaki iki AA’dan birini aldığınız bir dersin hocasından tavsiye mektubu istemek çok yerinde olacaktır. -mı acaba?- Bir hoca tavsiye mektubuna ne yazar ki? Başvuruları okuyan komite bu mektupları neden ister ve bu mektuplarda ne görmek ister? Sanırım bu sorunun cevabı “çok zor bir dersten birçok parlak öğrencinin arasında AA aldığınızı” vurgulayan bir metin yerine “sizin ders materyalinin dışında hocaya neler sorduğunuzu, kendisiyle ne tarz çalışmalar içine girdiğinizi, diğer AA alanlardan ne farkınız olduğunu” vurgulayan bir metin olacaktır. Burada şunu anlamamız gerekir ki tavsiye mektuplarını yazanlar hocalarımızdır. Fakat bu mektupların içini dolduranlar biz öğrencileriz. Bu yüzden ikinci üçüncü sınıflarda iken konusuna uzaktan bir aşinalığınız olan, içinizde küçük de olsa bir merak uyandıran bir hocanıza gidip bu konularla ilgilenmek istediğinizi söyleyebilirsiniz. Zamanla severseniz (büyük ihtimalle seveceksinizdir) devam edersiniz, sevmezseniz başka bir hocanıza sorabilirsiniz. Hocalarınız bundan alınmayacaklar size karşı bir tavır almayacaklardır, çünkü neredeyse hiçbir insanoğlu hayatının ileri evrelerinde 19-20 yaşlarında ilgi duyduğunu sandığı işi yapmıyor. (en azından benim için öyle oldu) Yani işin özü şudur ki, dördüncü sınıf başlayıp da “recommendation letter” isteme zamanı geldiğinde kendimizi ve mektubu istediğimiz hocamızı “dersime hiç aksatmadan geldi, en başarılı oldu ve AA aldı, çok gayretli bir çocuk” demek zorunda bırakmak hocamızı ve kendimizi ve sıkıntılı bir duruma sokacaktır; öyle ki çok başarılı bir öğrenci olduğu halde AA aldığı bir dersin hocasına gittiğinde hocamızın inanılmaz dürüst ve olgun tavrı sayesinde “ben sana etkili bir mektup yazamam ki, başka bir hocandan istesen çok daha iyi edersin” cevabını alan bir arkadaşım da olmuştur. Kısacası; bu işi son ana bırakmayın, hocalarınızın araştırmalarını küçük sınıflarda iken araştırmaya başlayın.
+\section{Tavsiye Mektubunun İçinin Doldurulması}
+Hocalardan tavsiye mektubu istemek, hocaların seçimi, “nasıl söylesem” dertleri her birimizin en az birkaç gece uykularını kaçırmıştır. Nitekim uykularımız boşa kaçmamıştır çünkü tavsiye mektubu mühim bir iştir. Mektupları isteyeceğiniz hocalarınızı sizi (mümkünse kişiliğinizi de) en iyi tanıdığına inandığınız hocalarınızdan seçmeniz faydalı olacaktır. Mesela dersine hiç aksatmadan gittiğiniz ve sonunda sınıftaki iki AA’dan birini aldığınız bir dersin hocasından tavsiye mektubu istemek çok yerinde olacaktır. (…mı acaba?) Bir hoca tavsiye mektubuna ne yazar ki? Başvuruları okuyan komite bu mektupları neden ister ve bu mektuplarda ne görmek ister? Sanırım bu sorunun cevabı “çok zor bir dersten birçok parlak öğrencinin arasında AA aldığınızı” vurgulayan bir metin yerine “sizin ders materyalinin dışında hocaya neler sorduğunuzu, kendisiyle ne tarz çalışmalar içine girdiğinizi, diğer AA alanlardan ne farkınız olduğunu” vurgulayan bir metin olacaktır. Burada şunu anlamamız gerekir ki tavsiye mektuplarını yazanlar hocalarımızdır. Fakat bu mektupların içini dolduranlar biz öğrencileriz. Bu yüzden ikinci, üçüncü sınıflardayken konusuna uzaktan bir aşinalığınız olan, içinizde küçük de olsa bir merak uyandıran bir hocanıza gidip bu konularla ilgilenmek istediğinizi söyleyebilirsiniz. Zamanla severseniz (büyük ihtimalle seveceksinizdir) devam edersiniz, sevmezseniz başka bir hocanıza sorabilirsiniz. Hocalarınız bundan alınmayacaklar size karşı bir tavır almayacaklardır, çünkü neredeyse hiçbir insanoğlu hayatının ileri evrelerinde 19 - 20 yaşlarında ilgi duyduğunu sandığı işi yapmıyor (en azından benim için öyle oldu). Yani işin özü şudur ki; dördüncü sınıf başlayıp da recommendation letter isteme zamanı geldiğinde kendimizi ve mektubu istediğimiz hocamızı “dersime hiç aksatmadan geldi, en başarılı oldu ve AA aldı, çok gayretli bir çocuk” demek zorunda bırakmak hocamızı ve kendimizi ve sıkıntılı bir duruma sokacaktır. Öyle ki çok başarılı bir öğrenci olduğu halde AA aldığı bir dersin hocasına gittiğinde hocamızın inanılmaz dürüst ve olgun tavrı sayesinde “ben sana etkili bir mektup yazamam ki, başka bir hocandan istesen çok daha iyi edersin” cevabını alan bir arkadaşım da olmuştur. Kısacası bu işi son ana bırakmayın, hocalarınızın araştırmalarını küçük sınıflardayken araştırmaya başlayın.
 
-\subsection{Yaz Stajları Hakkında}
-Bulunduğunuz okulda birçok farklı grupta research deneyimi kazanmış ya da eğitim hayatınız boyunca hiç böyle bir imkan bulamamış bile olabilirsiniz. Her iki durumda da (tercihen yurtdışında) başka bir okulda bir araştırmaya katılmanız çok faydalı olacaktır. Öyle ki, birçok “admission committe” üyesinin söylediği-yazdığı şey şu ki: “a 4.0 with no prior research experience wouldn’t get you into PhD”. Bunun için ise öncelikle aklınıza ilk gelen okullardaki ilgilendiğiniz departmanların sitesine girip hocalara ve araştırma konularına bakmakla başlayabilirsiniz. Hoca araştırmasında Türkleri seç\-meye çalışabilirsiniz, ben öyle yaptım. Çoğu zaman yurtdışındaki Türk hocalar laboratuarlarında parlak ve istekli Türk öğrencilere bir görev bulmakta daha yardımsever oluyorlar, tabi ki burada yabancı hocalara ulaşmaya çalışmayın demiyorum. Böyle yaz stajı yaptığını bildiğim beş kişiden ikisi Türk hocanın yanında diğerleri yabancı hocaların lab’larında çalışmıştı. 
+\section{Yaz Stajları Hakkında}
+Bulunduğunuz okulda birçok farklı grupta research deneyimi kazanmış ya da eğitim hayatınız boyunca hiç böyle bir imkan bulamamış olabilirsiniz. Her iki durumda da (tercihen yurtdışında) başka bir okulda bir araştırmaya katılmanız çok faydalı olacaktır. Öyle ki, birçok admission committe üyesinin söylediği / yazdığı şey şu ki: “a 4.0 with no prior research experience wouldn’t get you into PhD”. Bunun için ise öncelikle aklınıza ilk gelen okullardaki ilgilendiğiniz departmanların sitesine girip hocalara ve araştırma konularına bakmakla başlayabilirsiniz. Hoca araştırmasında Türkleri seçmeye çalışabilirsiniz, ben öyle yaptım. Çoğu zaman yurtdışındaki Türk hocalar laboratuarlarında parlak ve istekli Türk öğrencilere bir görev bulmakta daha yardımsever oluyorlar. (Tabii ki burada yabancı hocalara ulaşmaya çalışmayın demiyorum. Böyle yaz stajı yaptığını bildiğim beş kişiden ikisi Türk hocanın yanında diğerleri yabancı hocaların lab’larında çalışmışlardı.)
 
-\subsubsection{Diğer Departmanlardan Korkmayın}
-Diyelim staj yapmayı çok istediğiniz bir okul/enstitü var ama bu okulda sizin major’ınızda\-ki hocaların hiçbirinin araştırması size çekici gelmiyor, veya Türk bir hoca aradınız ve bulamadınız, hemen yelkenleri suya indirmeyin ve lütfen diğer departmanlara da bir göz atın. Şimdi ben fizikçiyim elektrikçinin işinden ne anlarım, makineciyim biyomedikalde ne yapabilirim ki, kimyacıyım CS departmanıyla ne işim olur demeyin\footnote{Sadece belki matematikçi değilseniz matematik departmanına bakmaktan biraz çekinebilirsiniz.}.  Tuna Boğaziçi’nde bilgisayar okurken MIT’de aero-astro bölümünde staj yaptı, ben fizik-makine okurken MIT’de Research Lab of Electronics’de nöron kestim biyoloji araştırması yaptım, başka bir arkadaşım endüstri okurken Yale’da “environmental sciences” departmaninda staj yaptı.
+Yaz stajıyla ilgili son olarak da şöyle bir gözlemde bulundum: Deneysel çalışan laboratuarlarda çok fazla staj imkanı oluyor çünkü bu laboratuarlar “hands-on” iş gücüne ihtiyaç duyarlar ve bu tarz gruplarda pozisyon bulmanız nispeten daha kolay olabilir.
 
-\subsection{Staj Ayarlamak}
-Ben üçüncü sınıftan dörde geçerken stajımı 3.sınıfın Şubat ayında halletmiştim. Baharın gelmesini beklemeden, ilk dönem midtermlerinize girip onlarla işinizi bitirdikten sonra sömestr tatilini hoca aramak, bulmak, mail yollamak, cevap beklemek, sonunda da stajınızı ayarlamakla geçirebilirsiniz. Ayrıca şunu da unutmamak lazım ki, eğer siz bir hocaya ulaşabilmiş ve ona mail yollamışsanız bu hoca büyük ihtimalle bir websitesi, research grubu olan dersler veren, konferanslara giden, “grant application”ları yazan çok meşgul bir insan olacaktır. Ve aynı insana sizin gibi en aşağı 157 tane Hintli, Çinli, Koreli, İngiliz hatta Türk da mail atıyor. O yüzden mail optimum uzunlukta olmalı, yani sizin nasıl bir background’unuz olduğu ve adamın konusuna ne kadar ilgi gösterdiğinizi açıklayabilecek kadar uzun fakat aynı zamanda adamın sıkılıp okumaya baymayacağı kadar da kısa olmalı. Bence gmail penceresinde yaklaşık 6 satırlık bir mail işinizi görecektir.
+\subsection{Diğer Departmanlardan Korkmayın}
+Diyelim staj yapmayı çok istediğiniz bir okul / enstitü var ama bu okulda sizin major’ınızdaki hocaların hiçbirinin araştırması size çekici gelmiyor veya Türk bir hoca aradınız ve bulamadınız: Hemen yelkenleri suya indirmeyin ve lütfen diğer departmanlara da bir göz atın. “Ben fizikçiyim elektrikçinin işinden ne anlarım”, “makineciyim biyomedikalde ne yapabilirim ki”, “kimyacıyım CS departmanıyla ne işim olur” demeyin\footnote{Sadece belki matematikçi değilseniz matematik departmanına bakmaktan biraz çekinebilirsiniz.}. Tuna Boğaziçi’nde bilgisayar okurken M.I.T.’de aero - astro bölümünde staj yaptı, ben fizik - makine okurken M.I.T.’de Research Lab of Electronics’de nöron kestim biyoloji araştırması yaptım, başka bir arkadaşım da endüstri okurken Yale’da Environmental Sciences departmanında staj yaptı.
 
-\subsubsection{Pes Etmemeli}
-Attığınız maillerin 50'de birine cevap bekleyin, o da çok büyük ihitimalle "sorry we don't have an opening for the summer, good luck in your search" ya da "I will not take anymore students  this summer" olacaktır. Sakın pes etmeyin! Bir arkadaşım için beş yüze yakın hocaya mail attık ve sadece bir kişiden olumlu cevap geldi: "We might find a spot for you in the lab". Bunu yazan hoca da Yale'dan bir (Amerikalı) hocaydı. Sonuç olarak yaz geçip başvurular tamamlanıp kabul zamanı geldiğinde arkadaşım birçok pek de bilinmeyen okuldan ret aldı ama Yale'da o hocanın yanına “environmental sciences” master programına girdi.
+\section{Staj Ayarlamak}
+Ben üçüncü sınıftan dörde geçerken stajımı üçüncü sınıfın Şubat ayında halletmiştim. Baharın gelmesini beklemeden, ilk dönem midterm’lerinize girip onlarla işinizi bitirdikten sonra sömestr tatilini hoca aramak, bulmak, mail yollamak, cevap beklemek, sonunda da stajınızı ayarlamakla geçirebilirsiniz. Ayrıca şunu da unutmamak lazım ki, eğer siz bir hocaya ulaşabilmiş ve ona mail yollamışsanız bu hoca büyük ihtimalle bir websitesi, research grubu olan dersler veren, konferanslara giden, grant application’ları yazan çok meşgul bir insan olacaktır. Ve aynı insana sizin gibi en aşağı 157 tane Hintli, Çinli, Koreli, İngiliz hatta Türk da mail atıyor. O yüzden mail optimum uzunlukta olmalı, yani sizin nasıl bir background’unuz olduğu ve adamın konusuna ne kadar ilgi gösterdiğinizi açıklayabilecek kadar uzun fakat aynı zamanda adamın sıkılıp okumaya baymayacağı kadar da kısa olmalı. Bence Gmail penceresinde yaklaşık 6 satırlık bir mail işinizi görecektir.
 
-\subsection{Başvuru Stratejisi}
-Diyelim ki okuduğunuz bölümle direk olarak alakalı olan bir işle değil de daha çok başka bir bölümün alanına giren bir konuya ilgi duyuyorsunuz. Mesela ben biyomedikalle ilgilenmek istiyordum ve bu yüzden on tane okula biyomedikal mühendisliği bölümüne başvurdum on tane ret aldım ve sadece bir okula kendi bölümüm olan makine mühendisliğine başvurdum ve oradan da kabul aldım. Ve danışmanım fizik PhD’li olup biyomedikal araştırması yapıyor, ben de şu anda makine mühendisliği öğrencisi olmama rağmen nere\-deyse hiçbir makine dersi almayıp onun yerine istediğim departmanlardan derslerimi alarak biyoloji alanında çalışıyorum. Yani burada benim kendi deneyimimden yola çıkarak tavsiye edebileceğim şey şudur ki başvuru safha\-sına geldiğinizde bölüm değiştirmek yerine kendi bölümünüzde hoca olan fakat ilgilendiğiniz konuda çalışan bir hoca bulmanız avantajınıza olabilir, çünkü diğer departmanda yanına başvurduğunuz hocanın yaptığı işe çok uygun olsanız ve sizi almak istese bile alamayabilir. Çünkü son kararı bir komite veriyor ve komite "bu delikanlının altyapısı bizim departmana pek de uygun değil, qualifierlar’da çok sancılı zamanlar yaşayacaktır" diyebilir.
 
-\subsubsection{Lisans Sürecinde Araştırma Yapmak}
-Sakın ben daha ikinci sınıfım ne bileceğim, daha diferansiyeli yeni aldım diye korkmayın, diferansiyel ve temel fizik dersleri birçok problemi anlamada yeterli oluyor bence. Zaten size bir lisans öğrencisi olarak verilecek is çok ağır olmayacaktır, kendimde ve etrafımda gördüğüm manzaralar hep bu yönde oldu. Mesela ben ne yaptım: kimyasalları birbirine karıştırdım, doktora öğrencilerinin özenle hazırlamış oldukları karmaşık set-up’larda operatör gibi buna bas şuna bas yaptım. Peki, bu yaz stajı bana tam olarak ne kattı? Araştırma nasıl yapılır, ne zorlukları vardır, araştırmada sorunla karşılaşmak nedir, üstesinden nasıl gelinir (ya da gelinemez) gibi konularda enikonu fikir edindim. Birçok makale okudum ve bilimsel makale nasıl aranır elde edilir onu öğrendim. Her şeyden en önemlisi de gerçekten biofizik alanını istiyor muyum yoksa benim için geçici bir heves miymiş onu anladım (istiyormuşum). Çünkü çoğu zaman bilim alanında insanların yaptığı secimler altı çok da dolu olmayan kulaktan dolma seçimler oluyor. Bu yüzden ilgi duyduğunuzu düşündüğünüz alanda ciddi bir akademik staj sadece resume'nizde yakışıklı duracağı için değil aynı zamanda sizin bu işi gerçekten sevip sevmediğinizi anlamanız için de çok önemli bir adım olacaktır.
+\subsection{Pes Etmemeli}
+Attığınız mail’lerin ellide birine cevap bekleyin, o da çok büyük ihitimalle ``sorry we don’t have an opening for the summer, good luck in your search'' ya da ``I will not take anymore students this summer'' olacaktır. Sakın pes etmeyin! Bir arkadaşım için beş yüze yakın hocaya mail attık ve sadece bir kişiden olumlu cevap geldi: “We might find a spot for you in the lab''. Bunu yazan hoca da Yale’dan bir (Amerikalı) hocaydı. Sonuç olarak yaz geçip başvurular tamamlanıp kabul zamanı geldiğinde arkadaşım birçok pek de bilinmeyen okuldan ret aldı ama Yale’da o hocanın yanına Environmental Sciences Master programına girdi.
 
-\subsection{Yaz Stajının Finansmanı - The Dark Side of The Moon}
-Yaz stajından para kazanmayı beklememek gerekiyor. Tüm giderlerinizin sizin ve ailenizin üzerinde olacağı varsayımıyla yola çıkmak yerinde olacaktır. Özellikle de çok top bir okulda bir hocanın yanına gidecekseniz ne yardan ne serden dememek gerekiyor bu noktada. Amerika’da 3 ay için 3*800 (kalma masrafı) + 1500 (yemek masrafı) = 3500-4000 dolar civarı para ayırmanız gerekebilir. Ama tabi ki size para ödeyecek staj hayatta bulamazsınız demiyorum. Bulabilirseniz çok iyi olur ama bu işlerde default olan 2.5-3 ay para almadan çalışmak. Çünkü şöyle düşünülebilir;  adamın okulunda, elinin altında zaten istekli onlarca öğrenci var, adam neden laboratuarına international bir öğrenci getirtmeye uğraşsın ki? Ayrıca, PhD’ye girdiğinizde 5 yıl boyunca bütün masraflarınız karşılanacak ve aylık 2000 dolar mertebesinde, kiranızı ödemenize, yemeğinizi yemenize, üstünüze başınıza birkaç öteberi almanıza ve az da olsa sağı-solu gezmenize yetecek bir maaşınız olacak.
+\section{Başvuru Stratejisi}
+Diyelim ki okuduğunuz bölümle direk olarak alakalı olan bir işle değil de daha çok başka bir bölümün alanına giren bir konuya ilgi duyuyorsunuz. Mesela ben biyomedikalle ilgilenmek istiyordum ve bu yüzden on tane okulda biyomedikal mühendisliği bölümüne başvurdum. On tane ret aldım ve sadece bir okula kendi bölümüm olan makine mühendisliğine başvurdum ve oradan da kabul aldım. Danışmanım fizik PhD’li olup biyomedikal araştırması yapıyor, ben de şu anda makine mühendisliği öğrencisi olmama rağmen neredeyse hiçbir makine dersi almayıp onun yerine istediğim departmanlardan derslerimi alarak biyoloji alanında çalışıyorum. Yani burada benim kendi deneyimimden yola çıkarak tavsiye edebileceğim şey şudur ki, başvuru safhasına geldiğinizde bölüm değiştirmek yerine kendi bölümünüzde hoca olan fakat ilgilendiğiniz konuda çalışan birini bulmanız avantajınıza olabilir. Çünkü diğer departmanda yanına başvurduğunuz hocanın yaptığı işe çok uygun olsanız ve sizi almak istese bile alamayabilir. Çünkü son kararı bir komite veriyor ve komite ``bu delikanlının altyapısı bizim departmana pek de uygun değil, qualifierlar’da çok sancılı zamanlar yaşayacaktır'' diyebilir.
 
-\subsubsection{Amerika’daki Pahalı Staj’a Muadil Olarak}
-Türkiye’de okullar var Koç'ta çalışan hocalar var onlara mail atabilirsiniz. Boğaziçi makinede okuyup Koç makinedeki bir hocayla araştırma yaptığını bildiğim bir arkadaşım var (şimdi UIUC’de). Sabanci ve Bilkent'te de çok iyi arastirma yapan hocalar var onlara da bakabilirsiniz. Avrupa’da Eindhoven, ETH gibi okullarda araştırma imkanları olduğunu biliyorum, oralarda staj yapan insanlar da oldu etrafımda.
+\subsection{Lisans Sürecinde Araştırma Yapmak}
+Sakın ben daha ikinci sınıfım ne bileceğim, daha diferansiyeli yeni aldım diye korkmayın. Diferansiyel ve temel fizik dersleri birçok problemi anlamada yeterli oluyor bence. Zaten size bir lisans öğrencisi olarak verilecek is çok ağır olmayacaktır, kendimde ve etrafımda gördüğüm manzaralar hep bu yönde oldu. Mesela ben ne yaptım: kimyasalları birbirine karıştırdım, doktora öğrencilerinin özenle hazırlamış oldukları karmaşık set-up’larda operatör gibi buna bas şuna bas yaptım. Peki bu yaz stajı bana tam olarak ne kattı? Araştırma nasıl yapılır, ne zorlukları vardır, araştırmada sorunla karşılaşmak nedir, üstesinden nasıl gelinir (ya da nasıl gelinemez) gibi konularda enikonu fikir edindim. Birçok makale okudum ve bilimsel makale nasıl aranır elde edilir onu öğrendim. Her şeyden en önemlisi de gerçekten biofizik alanını istiyor muyum yoksa benim için geçici bir heves miymiş onu anladım (istiyormuşum). Çünkü çoğu zaman bilim alanında insanların yaptığı seçimler altı çok da dolu olmayan kulaktan dolma bilgilerle oluyor. Bu yüzden ilgi duyduğunuzu düşündüğünüz alanda ciddi bir akademik staj sadece resume’nizde yakışıklı duracağı için değil aynı zamanda sizin bu işi gerçekten sevip sevmediğinizi anlamanız için de çok önemli bir adım olacaktır.
 
-\subsection{Bölümdeki Hocalara Yaz Stajını Danışmak}
-Ayrıca bölümdeki hocalarınıza da staj ile ilgili yardımcı olup olamayacakları sorulabilir: “bir tanıdığınız-beni tavsiye edebileceğiniz, bağlantı kurabileceğiniz hatta beni yollayabileceğiniz bir yer var mı” diye. Benim bir hocam (ben stajımı ayarladıktan çok sonra): "keşke bana soyleseydin, seni şuraya yollardık orda bizim Hüseyin var hem para da verirdi" dedi, ama benim için iş işten geçmişti tabi. Yani şunu fark etmeliyiz ki hocalarımız “biz talep ettiğimiz sürece” biz talebelere beklediğimizden çok daha fazla imkanlar yaratabilirler.
+\section{Yaz Stajının Finansmanı - The Dark Side of The Moon}
+Öncelikle yaz stajından para kazanmayı beklememek gerekiyor. Tüm giderlerinizin sizin ve ailenizin üzerinde olacağı varsayımıyla yola çıkmak yerinde olacaktır. Özellikle de çok top bir okuldaki bir hocanın yanına gidecekseniz ne yardan ne serden dememek gerekiyor bu noktada. Amerika’da üç ay için $3 * 800$ (kalma masrafı) $+ 1500 $(yemek masrafı)$=3500-4000$ dolar civarı para ayırmanız gerekebilir. Ama tabi ki size para ödeyecek staj hayatta bulamazsınız demiyorum. Bulabilirseniz çok iyi olur ama bu işlerde default olan ikibuçuk - üç ay para almadan çalışmak. Çünkü şöyle düşünülebilir; adamın okulunda elinin altında zaten istekli onlarca öğrenci var, adam neden laboratuarına international bir öğrenci getirtmeye uğraşsın ki? Ayrıca, PhD’ye girdiğinizde beş yıl boyunca bütün masraflarınız karşılanacak ve aylık ikibin dolar mertebesinde, kiranızı ödemenize, yemeğinizi yemenize, üstünüze başınıza birkaç öteberi almanıza ve az da olsa sağı - solu gezmenize yetecek bir maaşınız olacak.
 
-\subsection{Son Olarak}
-Yaz  stajıyla ilgili son olarak da şöyle bir gözlemde bulundum:  Deneysel çalışan laboratuvarlarda çok fazla staj imkanı oluyor çünkü bu laboratuarlar “hands-on” iş gücüne ihtiyaç duyarlar ve bu tarz gruplarda pozisyon bulmanız nispeten daha kolay olabilir. 
+\subsection{Amerika’daki Pahalı Staj’a Muadil Olarak}
+Türkiye’de de okullar var. Mesela Koç’ta çalışan hocalar var onlara mail atabilirsiniz. Boğaziçi makinede okuyup Koç makinedeki bir hocayla araştırma yaptığını bildiğim bir arkadaşım var (şimdi UIUC’de). Sabancı ve Bilkent’te de çok iyi araştırma yapan hocalar var onlara da bakabilirsiniz. Avrupa’da Eindhoven, ETH gibi okullarda araştırma imkanları olduğunu biliyorum, oralarda staj yapan insanlar da oldu etrafımda.
+
+\section{Bölümdeki Hocalara Yaz Stajını Danışmak}
+Ayrıca bölümdeki hocalarınıza da stajla ilgili yardımcı olup olamayacaklarını sorabilirsiniz. Hocanıza, “Bir tanıdığınız var mı?”, “Beni tavsiye edebileceğiniz, bağlantı kurabileceğiniz hatta beni yollayabileceğiniz bir yer var mı?” gibi sorular sormaktan çekinmeyin. Benim bir hocam (Ben stajımı ayarladıktan çok sonra): ``Keşke bana söyleseydin, seni şuraya yollardık orda bizim Hüseyin var hem para da verirdi'' dedi, tabii benim için iş işten geçmişti. Yani şunu fark etmeliyiz ki hocalarımız “biz talep ettiğimiz takdirde” biz talebelere beklediğimizden çok daha fazla imkanlar yaratabilirler.
+
 \newpage
 %
 % Basvuru taktikleri
 %
-\section{Başvuru Zamanı İçin Tavsiyeler}
+\chapter{Başvuru Zamanı İçin Tavsiyeler}
 %
-\subsection{Kendine Göre Okul ve Hoca Aramak}
-Okulları bulduktan sonra başvurunda bahsedeceğin ya da mail atacağın hocayı seçmek önemli bir iştir. Bu iki iş uzunca vaktinizi aldığı gibi başına oturup odaklanması da zordur. İyisi mi siz internette sörf eylerken bir yandan bu işlere bakıyor olun. Bu araştırmaların, Ekim-Kasım zamanı artık sonlanması lazım ki, tam başvurular esnasında yeni okullar ortaya çıkmasın. Başvuru işini ranking üzerinden okul seçip yapıyorsanız; “bugün 10-15 arasına bakacağım” gibi planlar yapılabilinir. 
+\section{Kendine Göre Okul ve Hoca Aramak}
+Okulları bulduktan sonra başvurunda bahsedeceğin ya da mail atacağın hocayı seçmek önemli bir iştir. Bu iki iş uzunca vakit aldığı gibi başına oturup odaklanması da zordur. İyisi mi siz internette sörf eylerken bir yandan bu işlere bakıyor olun. Bu araştırmaların, Ekim - Kasım zamanı artık sonlanması lazım ki, tam başvurular esnasında yeni okullar ortaya çıkmasın. Başvuru işini de ranking üzerinden okul seçip yapıyorsanız; “Bugün on onbeş arası okullara bakacağım” gibi planlar yapabilirsiniz.
 
-Okulları bulmak bence işin en önemli kısmı. Bu işin sonunda kesinlikle, üniversite web sitelerinin uzmanı oluyorsunuz. Onur'un dediği gibi boş vakit mi buldunuz, internette poker oynayacağınıza (lafımın kime olduğu açık), research gruplarının sitelerinde dolanın. Dolandıkça insanın kafasında ``yahu bu adamın yaptığı şeyler iyiymiş'' gibi fikirler yavaş yavaş oturuyor.. 
+Okulları bulmak bence bu işin en önemli kısmı. Bu süreç bittiği zaman emin olun, üniversite web sayfalarının uzmanı olacaksınız. Onur’un dediği gibi boş vakit mi buldunuz, internette poker oynayacağınıza (lafımın kime olduğu açık), research gruplarının sitelerinde dolanın. Dolandıkça insanın kafasında “yahu bu adamın yaptığı şeyler iyiymiş” gibi fikirler yavaş yavaş oturuyor.
 
-Diyelim A adlı arkadaşı (arkadaş dediğim hoca) sevdiniz. Son publish ettiği yayınlara bakın, beraber çalıştığı insanlara bakın. Standart bir yöntem şu olabilir: Elimizde süperstar bir fizikçi var (attım Randall, bizim köylü de ondan). Kasış bir okulda olduğu için kendisi çok meşgul. Bu yüzden ne yapıyoruz? Kadının en son parlamakta olan doktora öğrencisi ya da beraber çalıştığı kişi iyicene bir üniversitede canavar gibi yeni fikirler üretmektedir. Biz de hemen Randall'la ortak yayın yaptığından dolayı zınk diye yakalıyor, “aha ben bu okula da girerim” deyip o okulu araştırıyor, potansiyel hocayı gözümüze kestiriyor ve listemize o okulu ekliyoruz. 
+Diyelim A adlı arkadaşı (arkadaş dediğim hoca) sevdiniz. Son publish ettiği yayınlara ve beraber çalıştığı insanlara bakın. Standart bir yöntem şu olabilir: Elimizde süperstar bir fizikçi var (attım Randall, bizim köylü de ondan). Kasış bir okulda olduğu için kendisi çok meşgul. Bu yüzden ne yapıyoruz? Kadının en son parlamakta olan doktora öğrencisini ya da beraber çalıştığı kişileri Randall’la ortak yayın yaptığından dolayı zınk diye yakalıyoruz. “Aha bu eski öğrencisinin olduğu okula da girebilirim” deyip o okulu araştırıyoruz, potansiyel hocaları gözümüze kestiriyoruz ve listemize o okulu ekliyoruz. 
 
-Boğaziçi'nin nerelerle nasıl bağları olduğunu anlamak da çok yararlı. Yakın olduğunuz hocalarla konuşun bu konuyu, onların tanıdıklarının olduğu yerlerde insan birkaç adım önde başlıyor. Birkaç adım demek çok adım demek. 
+Boğaziçi’nin nerelerle, nasıl bağları olduğunu anlamak da çok yararlı olacaktır. Bu konuyu yakın olduğunuz hocalarla konuşun, onların tanıdıklarının olduğu yerlerde insan birkaç adım önde başlıyor. Birkaç adım demek, çok adım demek. 
 
-Kaliforniya Sendromu'na yakalanmayın. Fizik'ten bildiğim kadarıyla University of California sisteminden kimseye kabul gelmedi. Bir tek esaslı oğlan Bugra Kaytanli'yi aldılar. İlla Kaliforniyacı iseniz o zaman USC, Caltech, Stanford gibi Kaliforniya'da olan özel okullara başvurun. Tabi çok isteyenler yine Santa Barbara için şansını deneyebilir. 
+Kaliforniya Sendromu’na yakalanmayın. Fizik’ten bildiğim kadarıyla University of California sisteminden kimseye kabul gelmedi. Bir tek esaslı oğlan Buğra Kaytanlı’yı aldılar. İlla Kaliforniyacıysanız o zaman USC, Caltech, Stanford gibi Kaliforniya’da olan özel okullara başvurun. Tabii çok isteyenler yine Santa Barbara için şansını deneyebilir.
 
-Şehir faktörü: Burada Boston'u öveceğim biraz. Kısaca akademik bir cennet Boston, günün her saati her konuda bir konferans yapılıyor. 
+Şehir faktörünü göz önünde bulundurun. Burada Boston’u öveceğim biraz. Kısaca akademik bir cennet Boston, günün her saati her konuda bir konferans yapılıyor.
 
-Enstitü faktörü: Bu da mühim bir konu. İlgilendiğiniz alanla ilgili bir enstitünün üniversite dahilinde bulunması ortamın ne kadar canlı olduğunu gösteriyor. Örneğin, Maryland'de JQI, UCSB'de Kavli, Berkeley'de Lawrence, Tufts'ta Cosmology... Enstitüleri bu okulların belirli alanlarda önder olmasını sağlıyor. 
+Enstitü faktörü de önemli bir konu. İlgilendiğiniz alanla ilgili bir enstitünün üniversite dâhilinde bulunması ortamın ne kadar canlı olduğunu gösteriyor. Örneğin, Maryland’de JQI, UCSB’de Kavli, Berkeley’de Lawrence, Tufts’ta Cosmology... Enstitüleri bu okulların belirli alanlarda önder olmasını sağlıyor. İşin devamıyla ilgili tavsiyelere geçmeden önce bu okul seçme kısmına bol bol değinmek lazım. Olaya sadece ranking olarak yanaşmak bence verimsiz. Kendimden birkaç örnek daha vereyim. Ben mesela Cornell ve Princeton fizik departmanlarına başvururken içimden “ya aslında ben bunların yaptığı işlere pek ısınmadım” diyordum. Ama bunu paylaşmaktan haliyle çekiniyordum, “ulen sen kim oluyorsun da ısınmıyorsun” derler diye. Bizim ilgi alanımızla departmanın eğilimlerinin uyuşması çok önemli. Onlar da benim için "bu oğlan fena değil ama bize gitmez” dediklerini tahmin ediyorum. Bence iyi de ediyorlar çünkü bu karar sizin için de iyi oluyor falan falan...
 
-İşin devamı ile ilgili tavsiyelere geçmeden önce bu okul seçme kısmına bol bol değinmek lazım. Olaya sadece ranking olarak yanaşmak bence verimsiz. Kendimden birkaç örnek daha vereyim.  
-Ben mesela Cornell ve Princeton fizik departmanlarına başvururken içimden ``ya aslında ben bunların yaptığı işlere pek ısınmadım'' diyordum. Ama bunu paylaşmaktan haliyle çekiniyordum, “ulen sen kim oluyorsun da ısınmıyorsun” derler diye. Bizim ilgi alanımızla departmanın eğilimlerinin uyuşması çok önemli. Onlar da benim için "bu oğlan fena değil ama bize gitme'' dediklerini tahmin ediyorum. Bence iyi de ediyorlar çünkü bu karar sizin için de iyi oluyor falan falan. 
+Kısacası CTRL + D kombinasyonuna alışın, bookmark’larınız grup siteleriyle dolsun!
 
-Kısacası CTRL+D kombinasyonuna alışın, bookmarklarınız grup siteleri ile dolsun.  
-
-\subsection{Sınavlar, Sınavların Alım İşleri}
+\section{Sınavlar, Sınavların Alım İşleri}
 %ekleme1
-Temelde okulların çoğu 2 sınav istiyor. Biri İngilizce yeterliliğinizi ölçtüğünü sanan TOEFL, diğeri ise ne işe yaradığı hala bilim çevrelerince tartışılan GRE. Sınavlar için tarihleri almak, yok efendim gün seçimi, mekan seçimi derken bir kaç gün alabiliyor. İki sınavınız arasında 10 gün bırakmanız iyi olacaktır ki çok sıkışıp sizi strese sokmasın. Ancak temel bilimlere başvuracaksanız GRE Subject sınavına da girmeniz gerekebilir. 
+Temelde okulların çoğu iki sınav istiyor. Biri İngilizce yeterliliğinizi ölçtüğünü sanan TOEFL, diğeriyse ne işe yaradığı hala bilim çevrelerince tartışılan GRE. Sınavlar için tarihleri almak, yok efendim gün seçimi, mekân seçimi derken birkaç gün alabiliyor. İki sınavınız arasında 10 gün bırakmanız iyi olacaktır. (Sınavlar çok sıkışıp sizi strese sokmasın.) Ancak temel bilimlere başvuracaksanız GRE Subject sınavına da girmeniz gerekebilir.
 
 
-\subsubsection{TOEFL}
-TOEFL 4 bölümden oluşuyor: Reading, Listening, Writing ve Speaking. Hangi bölüm kaç sorudan oluşuyor hatırlamıyorum, fakat aralarda bonus sorular çıkabiliyor. Yani Listening'den 30 soru çıkması gerekirken 45 soru çıkabilir. Bunların hangilerinin puanlanacağını sınav sırasında bilemiyoruz, fakat sınav çıkısında sizinle giren arkadaşlara sorarsanız kesişimi bulabilirsiniz. Reading klasik reading, sorular sırasında solda paragraf açık duruyor, yani parçayı önceden bir okuyayım notlar alayım yapmanıza gerek yok. Listening de normal listening. Bir şeyler dinliyorsunuz ve sonra sorulan sorulara cevap veriyorsunuz. Burada not almak önemli. Speaking'de 6 tane speaking sorusu var. Bunların 2 tanesi havadan sudan şeyler, “hayatında gördüğün en güzel kızı tanımla'', “en çok neden kor\-karsın'' gibi bir şeyler. Kalanları ``integrated'' dediğimiz Listening ile birleştirip yapılacak sorular. Önemli olan yine not alabilmek. Speaking'te benim gördüğüm zaman doldurma için tekrar yapabilirsiniz. Her ne kadar 45 saniye kısa gibi görünse de bazen söyleyecek bir şey gelmiyor. Bu durumda, “mm” diyip daha önce söylediğiniz bir cümleyi ``paraphrase'' edip zaman kazanabilirsiniz.  Fakat bu tekrarları çok yapmayın, kafa ütülemeyin. Writing ise iki tane, biri klasik writing, konu veriliyor ve bununla ilgili orta uzunlukta bir essay yazmanız isteniyor. Diğeri ise yine integrated. TOEFL için çalışılabilecek 3-4 kaynak var. Kaplan, Cambridge, Barron veya Longman. Yanlış hatırlamıyorsam Longman en kolayı. Daha sonra Kaplan, sonra Barron ve sonra da Cambridge. Ancak Barron's gerçek sınava en yakın olan diyebilirim. 
+\subsection{TOEFL}
+TOEFL dört bölümden oluşuyor: Reading, Listening, Writing ve Speaking. Hangi bölüm kaç sorudan oluşuyor hatırlamıyorum, fakat aralarda bonus sorular çıkabiliyor. Yani Listening’den otuz soru çıkması gerekirken kırkbeş soru çıkabilir. Bunların hangilerinin puanlanacağını sınav sırasında bilemiyoruz, fakat sınav çıkısında sizinle giren arkadaşlara sorarsanız kesişimi bulabilirsiniz. Reading klasik reading, sorular sırasında solda paragraf açık duruyor, yani parçayı önceden bir okuyayım notlar alayım yapmanıza gerek yok. Listening de normal listening. Bir şeyler dinliyorsunuz ve sonra sorulan sorulara cevap veriyorsunuz. Speaking kısmında not almak önemli. Speaking’de altı tane soru var. Bunların iki tanesi havadan sudan şeyler, “hayatında gördüğün en güzel kızı tanımla”, “en çok neden korkarsın” gibi şeyler. Kalanları “integrated” dediğimiz Listening ile birleştirip yapılacak sorular. Önemli olan yine not alabilmek. Speaking’te benim gördüğüm zaman doldurma için tekrar yapabilirsiniz. Her ne kadar kırkbeş saniye kısa gibi görünse de bazen söyleyecek bir şey gelmiyor. Bu durumda, “mm” diyip daha önce söylediğiniz bir cümleyi “paraphrase” edip zaman kazanabilirsiniz. Fakat bu tekrarları çok yapmayın, kafa ütülemeyin. Writing ise iki tane, biri klasik writing, konu veriliyor ve bununla ilgili orta uzunlukta bir essay yazmanız isteniyor. Diğeriyse yine integrated. TOEFL için çalışılabilecek üç dört kaynak var. Kaplan, Cambridge, Barron veya Longman. Yanlış hatırlamıyorsam Longman en kolayı. Daha sonra Kaplan, sonra Barron ve sonra da Cambridge. Ancak Barron’s gerçek sınava en yakın olan diyebilirim.
 
-\subsubsection{GRE General}
-GRE, General çok boş bir sınav. 3 bölümden oluşuyor: Quantitative, Verbal, Writing. Quantitative bizim lise seviyesinde (3/2+1/5)*x=7 ise “x’in yarısı kaçtır?'' şeklinde sorular. ÖSS çabukluğunu kaybettiğinizi düşünüyorsanız 1-2 test çözün hem nasıl sorular olduğunu anlarsınız. En kıl tüy Q soruları grafikli olanlar, yok grafiği nerede kesiyor, orası 75 civarı mı yoksa 77.5 un biraz üstü gibi mi sorular. GRE Verbal inanılmaz ezber isteyen bir bölüm. 3600 tane kelimesi mi ne var, ezberle ezberle bitmez. O yüzden pek uğraşmayın. Writing önemli. 2 tane writing var. Birinde konu veriliyor siz yazıyorsunuz, diğerinde ise bir adamın söylediği önermenin ve arkasındaki ``reasoning''in neden yanlış olduğunu yazdığınız bir essay. GRE general çalışmaya değecek bir şey değil, en azından temel bilimci olan gençlerimiz için, mühendislik isteyenlerin biraz daha iyi olsa iyi olabilir belki.  
+\subsection{GRE General}
+GRE General çok boş bir sınav. Üç bölümden oluşuyor: Quantitative(Q), Verbal(V), Writing. Quantitative bizim lise seviyesinde, “$(3/2+1/5)*x=7$ ise $x$’in yarısı kaçtır?” şeklinde sorular. ÖSS çabukluğunu kaybettiğinizi düşünüyorsanız bir iki test çözün hem nasıl sorular olduğunu anlarsınız. En kıl tüy Q soruları grafikli olanlar, “yok grafiği nerede kesiyor, orası 75 civarı mı yoksa 77.5’un biraz üstü mü?” gibi mi sorular. GRE Verbal inanılmaz ezber isteyen bir bölüm. 3.600 tane kelimesi mi ne var, ezberle ezberle bitmez. O yüzden pek uğraşmayın. Writing önemli. İki tane writing var. Birinde konu veriliyor siz yazıyorsunuz, diğerindeyse bir adamın söylediği önermenin ve arkasındaki reasoning’in neden yanlış olduğunu yazdığınız bir essay. GRE General çalışmaya değecek bir şey değil, en azından temel bilimci olan gençlerimiz için. Mühendislik isteyenlerin biraz daha iyi olsa iyi olabilir belki.
 
-\subsubsection{GRE Subject}
-GRE Subject sınavı senede 3 kere yapılıyor; Ekim, Kasım ve Nisan aylarında. "Ekim ayındaki sınavın sonucunu öğreneyim ona göre Kasım ayında sınavı tekrar alırım" deme şansınız olmuyor çünkü kayıtlar sınavdan neredeyse bir ay önce kapanıyor. 
+\subsection{GRE Subject}
+GRE Subject sınavı senede üç kere yapılıyor; Ekim, Kasım ve Nisan aylarında. "Ekim ayındaki sınavın sonucunu öğreneyim ona göre Kasım ayında sınavı tekrar alırım" deme şansınız olmuyor çünkü kayıtlar sınavdan neredeyse bir ay önce kapanıyor.
+
+\subsection{GRE Fizik}
+Physics GRE sınavı Ekim, Kasım ve Nisan olmak üzere senede üç kere veriliyor. Eğer iyi bir şekilde hazırlanabilirseniz, Nisan ayında sınavı almak en ideali. Ara tatil bu sınava çalışmak için güzel bir dönem. Ayrıca kötü gelmesi durumunda şansınızı Ekim ve / veya Kasım ayında tekrar deneyebilirsiniz. Sınava http://www.ets.org/gre adresinden kayıt olmak gerekiyor. İki üç ay öncesinden kayıt olursanız hem yer kalmama sorununu halledersiniz hem de kendinizi biraz daha çalışmaya mecbur bırakmış olursunuz. 
+
+Sınav yüz sorudan oluşuyor ve sınavın toplam süresi yüzyetmiş dakika. Piyasada PGRE için özel hazırlanmış kitaplar mevcut ancak bunları çözmek çok fazla zamanınızı alabilir ve pek de gereği yok. İnternetten daha önceki senelerin soru kitapçıklarına ulaşabilirsiniz. Toplam dört tane mevcut ve bunlar sınava hazırlanmanız için yeterli.\\ http://grephysics.net/ans/ adresinden soruların çözümlerine ulaşabilirsiniz ama öncelikle tüm soruları kendiniz çözün ve her sınav esnasında eksikliğini hissettiğiniz hatta doğruluğunda şüphe duyduğunuz soruları belirleyerek uygun konulara çalışmanız en doğru yol olacaktır. Her sınav için bu şekilde çalıştığınız takdirde dördüncü sınav sonunda kendinizi hazır kabul edebilirsiniz. Bu dört sınav dışında herhangi bir konu çıkmayacağına emin olabilirsiniz. 
+
+Bu sınavda birkaç taktik bilmeniz sizin için çok yararlı olacaktır. Örneğin bazı sorularda birim analizi yaparak sonuca ulaşabilirsiniz. Limitlerde çaresiz kaldığınız durumlarda (sıfır ve sonsuz limitleri) cevabın nereye gideceğine bakıp birkaç seçeneği eleyebilirsiniz. Ayrıca “order of magnitude” hesaplarını bilmek çok çok önemli. Bazı sorularda seçenekler arasında büyük farklar oluyor ve hiçbir işlem yapmadan sonuca ulaşmak mümkün olabiliyor. 
+
+Sınav için kendinize minimum altı haftalık bir çalışma takvimi hazırlayın ve eğer bu sınava girecek başka arkadaşlarınız varsa beraber çalışın. Soruların konulara göre dağılımı ve çalışabileceğiniz kaynakları aşağıda veriyoruz.
+\begin{description}
+\item[Klasik Mekanik] (\% 20): Bu alandaki soruların büyük çoğunluğu Serway ve Halliday - Resnick kitaplarının seviyesinde olmaktadır. Genel olarak Serway’deki bütün klasik mekanik konularını kapsamanın yanında, ortalama olarak iki sorunun da temel Lagrange - Hamilton formalizminden çıktığını söyleyebiliriz. Bu alandaki sorular diğer alandaki sorulara göre daha uğraştırıcı olabilmektedir. 
+\item[Elektromanyetik] (\% 18): Bu alandaki sorular da genel olarak Serway seviyesinde olmakla beraber Griffiths EM’nin ilk konularından sorular da çıkabilmektedir. Çoğu soru temel elektrik ve manyetik alan hesaplamaları, Kirchoff yasaları ve Lorentz Kuvveti’nden çıkmaktadır. Hesap gerektiren sorularda karışık integraller ve kompleks sistemler verilmez. Bazen yorum gerektiren sorular da sormaktadır. İvmeli parçacıkların yaydığı enerji nelere bağlıdır veya alan çizgileri nasıl olacaktır veya verilen sistemde değişen manyetik veya elektrik alanının oluşturacağı akımlar ve yeni alanlar nasıl olacaktır gibi sorular sorulabilir. 
+\item[Optik ve Dalgalar] (\% 9): Ağırlıklı olarak geometrik optik ve girişim soruları çıkmaktadır. Verilen herhangi bir mercek - ayna sisteminde görüntü bulma ve Serway seviyesinde girişim soruları çıkmaktadır. Bunların yanı sıra polarizasyon,  superpozisyon, dalga özellikleri ve Doppler kaymasının da iyi bilinmesi gerekebilir.
+\item[Termodinamik ve İstatistik Mekanik] (\% 10): Termodinamik proseslerde iş, iç enerji değişimi veya ısı değişimi gibi sorular çıkabilir. Özellikle temas halindeki maddelerde ısı alışverişi veya termal genleşme gibi sorular sıklıkla çıkmaktadır. İstatistik alanında, hesap gerektiren sorulardan ziyade yorum gerektiren sorular tercih edilir.  
+\item[Kuantum Mekaniği] (\% 12):Üçüncü sınıf öğrencilerinin en çok zorlanabileceği alan budur. Zira bu alandaki eksikliği Rohlf’un Modern Physics kitabi karmaşıklığından dolayı giderememektedir. Schrödinger denkleminin çeşitli sistemlerdeki (square well, harmonic oscillator, hydrogenic atoms) çözümü ezber seviyesinde iyi bilinmelidir. Bu alan için Griffiths’in Introduction to Quantum Mechanics kitabı birebirdir. Bu kitapta spin ve açısal momentum operatörlerine iyi çalışılmalıdır. Perturbasyon Teorisi’nden de sorular çıkabilmektedir.  
+\item[Atom Fiziği] (\% 10):Bohr Modeli ve enerji spektrumunu sorularının ağırlıklı olduğu bu alana Rohlf’un Modern Physics kitabından çalışılabilir. Black - body radiation ve x-ray konularında yorum gerektirebilecek sorular sorulabilir. Hidrojen atomu ve hidrojen benzeri atomlarda foton ışımasına ve quantum mekaniksel “selection rules” mutlaka çalışılmalıdır.
+\item[Özel Görelilik] (\% 6): Bu alandaki sorularda zaman genişlemesi, uzunluk kısalması, eş zamanlılık ve Lorentz dönüşümleri ağırlık taşımaktadır. 
+\item[Laboratuar Metotları] (\% 6):Birim analizi, olasılık hesapları ve radyasyonlarda counting istatistiği soruları bu alandaki en yaygın sorulardır. Bazen verilen bir grafiği yorumlama ve hata analizi yapma gereksinimi doğabilir. Verilen bir elektronik devresinde verilen bir devrenin çıkış voltajının grafiği sorulabilir. 
+\item[Özel Konular] (\% 9): Bu alandaki sorular nükleer fizikten katı hal fiziğine kadar birçok alanda kişisel ilgiyle öğrenilebilecek sorulardan oluşmaktadır. Bu açıdan wikipedia gibi bir kaynak size yeterli olabilecek bütün bilgilere sahiptir. Temel parçacıkların bağlı olduğu aileler ve bunların özellikleri iyice ezberlenmelidir! Herhangi bir yerde duymuş olduğunuz bütün fiziksel “effect”leri (Zeeman, Meisner, Stark vs.) öğrenmeye çalışın. Bunların dışında kristal örgülerin, radyoaktif reaksiyonların, yarı iletkenlerin ve süper iletkenlerin de üşenmeden öğrenilmesi gerekir. 
+
+\end{description}
 
 
-\subsubsection{Sınavların açıklanması ve sonuç belgeleri}
-Burada dikkat edilmesi gereken bir husus, GRE General ve GRE Subject sınavlarına kayıt olurken tamamen aynı isim, soyad, doğum tarihi ve bilgilerinizi girmenizin gerekliliği. Yoksa GRE'nin sistemi aynı kişi olduğunuzu bir türlü anlamıyor ve Subject ve General'ı beraber gönder komutunu veremiyorsunuz. Bu da gönderi masraflarının ikiye katlanması demek. GRE Subject sınavı senede 3 kere yapılıyor; Ekim, Kasım ve Nisan aylarında. "Ekim ayındaki sınavın sonucunu öğreneyim ona göre Kasım ayında sınavı tekrar alırım" deme şansınız olmuyor çünkü kayıtlar sınavdan neredeyse bir ay önce kapanıyor. 
+\subsection{Sınavların açıklanması ve sonuç belgeleri}
+
+Burada dikkat edilmesi gereken bir husus, GRE General ve GRE Subject sınavlarına kayıt olurken tamamen aynı isim, soy isim, doğum tarihi ve bilgilerinizi girmenizin gerekliliği. Yoksa GRE’nin sistemi aynı kişi olduğunuzu bir türlü anlamıyor ve Subject ve General’ı beraber gönder komutunu veremiyorsunuz. Bu da gönderi masraflarının ikiye katlanması demek. GRE Subject sınavı senede üç kere yapılıyor; Ekim, Kasım ve Nisan aylarında. ``Ekim ayındaki sınavın sonucunu öğreneyim ona göre Kasım ayında sınavı tekrar alırım'' deme şansınız olmuyor çünkü kayıtlar sınavdan neredeyse bir ay önce kapanıyor. GRE ve TOEFL sistemleri için şifrenizi bir yere not edin. Saçma gelebilir ama koydukları şifre politikaları yüzünden şifrenizi unutursanız “Forget Password” yaparken hesabınız sebepsiz yere kilitlenebilir. Daha sonra hesabınızı açtırmak için telefonla saatlerinizi geçirmek zorunda kalabilirsiniz. TOEFL sınav sonucu ondört gün içerisinde internette açıklanıyor. Sonuç kağıdının evinize varmasıysa daha uzun sürebilir. GRE General sınavını da ondört gün içerisinde internetten öğrenebilirsiniz. Ancak bu sürede sadece Quantitative ve Verbal kısımlarının sonuçları açıklanıyor. Yaklaşık yirmibir gün sonra Writing kısmı da açıklanmış oluyor. GRE Subject skorlarının açıklanmasıysa altı haftayı buluyor. Ancak dört hafta içerisinde telefonla arayıp skoru erken öğrenme şansınız mevcut. Bu hizmet için ETS 12\$ alıyor. Okulların başvurularını yaparken sonuç belgelerinin size veya okullara varmış olmasına gerek yok. İnternetten sonucu görebiliyor olmanız, başvuruyu doldururken gerekli kısımlara sonuçlarınızı yazmanız yeterli. ETS sonuçları toplu şekilde, yanılmıyorsam ayda iki kere, okullara dağıtıyor.
+
+Sınav sonuçları geldikten sonra additional score report’ların gönderimi, bilgisayar başında geçen bir iki saat diyebilirim. Bazen daha da uzun sürebiliyor; eğer kredi kartınız sorun çıkartıyorsa veya çok okula başvurduysanız. Hepsini seçmek, hepsini onaylamak derken bu gerçekten cins bir iş. Ama bunu elbette ki Kasım ayı civarında yapmanız lazım. GRE skor belgesi yollarken hem General hem Subject seçip gönderebiliyorsunuz. Ayrı ayrı sipariş vermeye gerek yok. Ayrıca birden fazla girdiğiniz sınavların bir tanesini yollamak gibi bir şey olmuyor. Ben iki tane subject sınavına girmiştim, skor belgelerinde her iki sınav ve genel sınav sonucu yazıyordu.
+
+GRE’yi aramanız gerekirse Skype üzerinden ücretsiz hatlarını (888 ile başlayan), ya da paralı hattı arayabilirsiniz. Amerika aramaları için Skype kredisi çok ucuz oluyor.
+ 
+
+\section{Okulların Online Başvurularının Doldurması}
+Bu iş kesinlikle en cins işlerden biri, her okulun kendine has soruları olduğu için en uzun zaman alan işlerden birisi budur. Bu işe girişmeden önce okulları belirlerseniz daha güzel, daha hoş! Bir Word dosyası gibi bir şey yaratın ve genel bilgilerin hepsini buna yazın: Adresiniz, okulunuzun adı, referansların isim, adres ve mail bilgileri, sınav sonuçlarınız, sınav kodlarınız vs. Copy paste kullanarak bu işi hızlı bir şekilde halledebilirsiniz. Bu işe istediğiniz an başlayabilirsiniz çünkü neredeyse tüm okullar doldurulan formları kaydedip sonradan kalınan yerden devam etme imkanı veriyor. Kullanıcı adı ve şifrelerinizi çok alakasız seçmeyin on onbeş okulla uğraşırken hepsine farklı isim kullanırsanız “of deli miyim ben” diyeceksiniz. Google Chrome bazı okullarda sorun çıkarttığından tüm okulların başvurularını Firefox’ta, “şifreyi hatırla” seçeneğini seçerek yapmanız tavsiye edilir. Bazı cins okullar “one shot” mantalitesinde, yani bir oturumda her şeyi doldurmanız gerekli. Bu tür okullar admission sayfalarında bunu söylüyorlar zaten. Bunları en sona bırakın. Ne de olsa tüm sonuçların gelmiş olması SOP (Statement Of Purpose)’un yazılmış olması gerekli.
 
 
-GRE ve TOEFL sistemleri için şifrenizi bir yere not edin. Saçma gelebilir ama koydukları şifre politikaları yüzünden şifrenizi unutursanız ``Forget Password'' yaparken hesabınız sebepsiz yere kilitlenebilir. Daha sonra telefonla saatlerinizi geçirirsiniz açtırmak için. 
+\section{SOP Yazılması}
+Bu işe toplamda bir ay verebilirsiniz, çünkü “ha yaptım, ha yapacağım” derken zaman geçiyor. SOP’unuzda “küçüklüğümden beri çöpçü olmak istiyorum, alın beni” şeklinde bir şey yazmayın, yemezler. Mümkün olduğu kadar akademik geçmişinizden bahsedin, laboratuvar çalışmaları, projeleriniz ve projelerinizin başvurduğunuz departmanla ilişkisinden bahsedin. Ayrıca temeli oluşturduktan sonra her başvurduğunuz okula göre değiştireceğiniz bir kısımları da olacaktır. Onu sona bırakabilirsiniz. Okula özel kısımların, gerçekten okula özel olmasına önem gösterin. MIT’yi sileyim, yerine Stanford yazayım derseniz elinizde kalabilir. Zira okul adını değiştirirsiniz, lab aynı kalır fakat Stanford’da öyle bir lab yoktur falan filan. Şu projeler ilgimi çekti yazacaksanız o projenin beş yıl önce tamamlanmış olmadığından emin olun. SOP yazdığım süreçte ben versiyon numarası kullanmıştım, küçük değişiklikler oldu mu sop1.0’dan sop1.1’e geçiyordum. Büyük değişikliklerde sop1.1’den sop2.0’a geçiyordum ve tüm dosyaları saklamış oldum. Böylece geriye dönüşler daha kolay oluyor. Bölümünüzde daha önce bu tip işlerle uğraşan biri varsa SOP’unuzu ona veya hocalarınıza da okutabilirsiniz. Onların öğretmen gözünden bakması faydalı olacaktır. Bazı yerlerde hoca ismi yazmanın faydalı olacağını okumuştum ama bilmiyorum, bu size kalmış. (Onur’un notu: Hoca ismi belirtmek iyi olacaktır diye düşünüyorum. Hem bölümü araştırdığınızı göstermek açısından, hem de bir hedefe kitlenmişlik imajı vermesi açısından önemli. Ancak yine de çok kesin laflar etmemek gerekiyor.) Ayrıca yaptığınız okul dışı etkinliklerden küçük bir paragraf içinde bahsedebilirsiniz. Örneğin, “efendim ben yelken yaptım ve takım ruhunu yakaladım ki bu da araştırma grubun da çalışırken büyük bir avantajdır” şeklinde kendinizi pazarlayın.
 
-TOEFL sınav sonucu 14 gün içerisinde internette açıklanıyor. Sonuç kağıdının evinize varması ise daha uzun sürebilir. GRE General sınavını da 14 gün içerisinde internetten öğrenebilirsiniz. Ancak bu sürede sadece Quantitative ve Verbal kısımlarının sonuçları açıklanıyor. Yaklaşık 21 gün sonra Writing kısmı da açıklanmış oluyor. GRE Subject skorlarının açıklanması ise 6 haftayı buluyor. Ancak 4 hafta içerisinde telefon ile arayıp skoru erken öğrenme şansınız mevcut. Bu hizmet için ETS 12\$ alıyor. Okulların başvurularını yaparken sonuç belgelerinin size veya okullara varmış olmasına gerek yok. İnternetten sonucu görebiliyor olmanız, başvuruyu doldururken gerekli kısımlara sonuçlarınızı yazmanız yeterli. ETS sonuçları toplu şekilde, yanılmıyorsam ayda iki kere, okullara dağıtıyor. 
+\section{Başvuru Dosyalarını Hazırlamak, Göndermek}
 
-Sınav sonuçları geldikten sonra ``additional score report''ların gönderimi, bilgisayar başında geçen bir iki saat diyebilirim. Bazen daha da uzun sürebiliyor; kredi kartınız sorun çıkartıyorsa ve çok okula başvurduysanız. Hepsini seçmek, hepsini onaylamak derken bu gerçekten cins bir iş. Ama bunu elbette ki Kasım ayı civarında yapmanız lazım. 
+Başvuru sürecinde en önemli noktalardan biri de dosyaların yedeklenmesi ve el altında bulundurulması. “dropbox.com” adresindeki online storage sistemini öneriyorum. Bilgisayarınıza bir program yüklüyorsunuz ve bir klasör seçiyorsunuz. Bu klasörün içindeki dosyalar online olarak yedekleniyor. Hem web üzerinden hem de başka bilgisayarlarda bu program yüklüyse kullanıcı adı ve şifrenizi girerek klasörün tüm içeriğine ulaşabiliyorsunuz.  Hem yedekleme işleviyle başvuru sürecinde bilgisayarınıza bir şey olursa içiniz rahat olur, hem de her yerden erişebilirsiniz. Diğer bir konuysa e-mai’linizi en etkili şekilde kullanmak. Mesela TOEFL sonucunuz geldi, tarattınız ve bilgisayarınızda var. Hemen kendinize ya da bir başka e-mailinize konu başlığı “TOEFL SCORE REPORT PDF” olan bir mail atın. Bu sayede internet erişiminiz olan her yerde e-mail hizmetinizin arama kısmını kullanarak kolayca sonuç pdf’nizi bulup bir yerlere upload edebilir ya da e-mail ile iletebilirsiniz. Keyword kullanımı çok önemli. Mesela alakasız bir yerdeyim, bir okuldan “TOEFL gelmemiş gönderebilir misiniz?” dediler. Hemen aramamı yaptım bunu forward’ladım iki saniyede: “Beyin bedava”.
 
-GRE skor belgesi yollarken hem General hem Subject seçip gönderebiliyorsunuz. Ayrı ayrı sipariş vermeye gerek yok. Ayrıca birden fazla girdiğiniz sınavların bir tanesini yollamak gibi bir şey olmuyor. Ben iki tane subject sınavına girmiştim, skor belgelerinde her iki sınav ve genel sınav sonucu yazıyordu. 
 
-GRE'yi aramanız gerekirse Skype üzerinden ücretsiz hatlarını 888 ile başlayan, ya da paralı hattı arayabilirsiniz. Amerika aramaları için Skype kredisi çok ucuz oluyor.  
+Ayrıca hocalara mail atarken okul mail adresinizi kullanmanızı tavsiye ediyorum. Eğer kullandığınız mail hizmetinde kullanıcı adınız isim ve soyadınızdan çok farklı ise (Örnek: crazy-boy85@gmail, iwannadoPhD@gmail) maillerinizin spam’i boylaması muhtemel olacaktır. Okul mailimi kullanarak attığım mailler, Gmail’ime göre cevap süresi fark edilebilir oranlarda azaldı. (Dört beş günden, bir iki güne). "Okul mail sistemimiz çok kötü kullanasım gelmiyor” diyorsanız, maili Gmail’inize yönlendirebilir oradan mail alışverişinde bulunabilirsiniz. Diğer bir tavsiyem ise ``*@*.edu'' adreslerinden gelen maillerin spam klasörünüze düşmesini engellemeniz. Bunu mail sağlayıcınızın filtre ayarlarını, mailin geldiği kısma "*@*.edu” yazıp bu mailleri spam klasörüne düşmeyecek şekilde düzenlemek. (``*''lar her türlü edu ile biten mailleri anlatmak için kullanılmıştır.)
 
-\subsection{Okulların Online Başvurularının Doldurması}
-Bu iş kesinlikle en cins işlerden biri, her okulun kendine has soruları olduğu için en uzun zaman alan işlerden birisi budur. Bu işe girişmeden önce okulları belirlerseniz daha güzel, daha hoş! Bir Word dosyası gibi bir şey yaratın ve genel bilgilerin hepsini buna yazın: Adresiniz, okulunuzun adı, referansların isim, adres ve mail bilgileri, sınav sonuçlarınız, sınav kodlarınız vs. Copy paste kullanarak bu işi çok hızlandırabilirsiniz. Bu işe istediğiniz an başlayabilirsiniz çünkü neredeyse tüm okullar doldurulan formları kaydedip sonradan kalınan yerden devam etme imkanı veriyor. Kullanıcı adı ve şifrelerinizi çok alakasız seçmeyin 10-15 okulla uğraşırken hepsine farklı isim kullanırsanız ``of deli miyim ben'' diyeceksiniz.. Google Chrome bazı okullarda sorun çıkarttığından tüm okulların başvurularını Firefox'ta, ``şifreyi hatırla'' seçeneğini seçerek yapmanız tavsiye edilir.  
+Başvuracağınız okullardaki hocalara mail atıp fikir sorma işiniyse Kasım - Aralık aylarına doğru yapmanız daha iyi olacaktır. Çünkü adamlara mail’inizde bahsedebileceğiniz sınav sonuçlarınız vs. gibi bilgiler de elinize geçmiş olur. Fakat şunu da unutmayın, muhtemelen on milyon Çinli de o hocaya mail atıyor olacaktır. Ayrıca başvurularda transkript isteniyor. Eğer beş taneden fazla için para yatırırsanız iki katı kadar veriliyor. On tanenin parasını yatırıp yirmi tane aldım ve onlarla başvuruları yaptım. Başvuruların belgelerini yollama işlerine gelince, birkaç gün önceden gidip FEDEX ya da DHL’den adres formlarını alın evde doldurup mekana o şekilde gidin. Böylece yollama işlerini hızlandırabilirsiniz. FEDEX’in daha iyi çalıştığını ve daha ucuz olduğunu gördük, bize öyle denk gelmiş de olabilir. FEDEX’in merkezi güney girişindeki otobüs durağının orada bulunan HİSAR COPY. Bu arada belirtilmesinde fayda olan diğer bir nokta ne kadar çok gönderimi aynı anda yaparsanız toplam gönderim masrafınızın o kadar düşeceği. Toplu gönderimlerde indirim yapıyorlar\footnote{Bu bölüm Boğaziçi Üniversitesi için geçerlidir. Diğer üniversitelerin etrafindaki kargo şirketlerinin de indirimleri olabilir.}.
 
-Bazı cins okullar ``one shot'' mantalitesinde, yani bir oturumda her şeyi doldurmanız gerekli. Bu tür okullar admission sayfalarında bunu söylüyorlar zaten. Bunları en sona bırakın. Ne de olsa tüm sonuçların gelmiş olması SOP (statement of purpose)'un yazılmış olması gerekli. 
-
-\subsection{SOP Yazılması}
-Bu işe toplamda bir ay verebilirsiniz, çünkü ha yaptım, ha yapacağım derken zaman geçiyor. SOP'unuzda ``küçüklüğümden beri çöpçü olmak istiyorum, alın beni''; şeklinde bir şey yazmayın, yemezler. Mümkün olduğu kadar akademik geçmişinizden bahsedin, laboratuvar çalışmaları, projeleriniz ve projelerinizin başvurduğunuz departmanla ilişkisinden bahsedin. Ayrıca temeli oluşturduktan sonra her başvurduğunuz okula göre değiştireceğiniz bir kısım da olacak. Onu sona bırakabilirsiniz. Bu okula özel kısmın gerçekten okula özel olmasına önem gösterin. MIT'yi sileyim, yerine Stanford yazayım derseniz eli\-nizde kalabilir, zira okulu yazarken lab da yazarsınız fakat Stanford'da öyle bir lab yoktur falan filan. Şu projeler ilgimi çekti yazacaksanız da o projenin 5 yıl önce tamamlanmış olmadığından emin olun. SOP yazdığım süreçte ben versiyon numarası kullanmıştım, küçük değişiklikler oldu mu sop1.0’dan sop1.1’e geçiyordum. Büyük değişikliklerde sop1.1’den sop2.0’a geçiyordum ve tüm dosyaları da sakladım. Böylece geriye dönüşler daha kolay oluyor. Bölümünüzde daha once bu tip işlerle uğraşan biri varsa SOP'unuzu ona veya hocalarınıza da okutabilirsiniz. Onların öğretmen gözünden bakması faydalı olacaktır. Bazı yerlerde hoca ismi yazmanın faydalı olacağını okumuştum ama bilmiyorum, bu size kalmış. (Onur'un notu: Hoca ismi belirtmek iyi olacaktır diye düşünüyorum. Hem bölümü araştırdığınızı göstermek açısından, hem de bir hedefe kitlenmişlik imajı vermesi açısından önemli. Ancak yine de çok kesin laflar etmemek gerekiyor.) Ayrıca yaptığınız okul dışı etkinliklerden küçük bir paragraf içinde bahsedebilirsiniz. Örneğin, ``efendim ben yelken yaptım ve takım ruhunu yakaladım; ki bu da araştırma grubun da çalışırken büyük bir avantajdır'' şeklinde  kendinizi pazarlayın. 
-
-\subsection{Başvuru Dosyalarını Hazırlamak, Göndermek}
-Başvuru sürecinde en önemli noktalardan biri de dosyaların yedeklenmesi ve el altında bulunması. dropbox.com adresindeki online storage sistemini öneriyorum. Bilgisayarınıza bir program yüklüyorsunuz ve bir klasör seçiyorsunuz. Bu klasörün içindeki dosyalar online olarak yedekleniyor ve hem web üzerinden hem de başka bilgisayarlarda bu program yüklü ise kullanıcı adı ve şifrenizi girerek klasörün tüm içeriğine ulaşabilirsiniz. Hem yedekleme işlevi ile başvuru sürecinde bilgisayarınıza bir şey olursa içiniz rahat olur, hem de her yerden erişebilirsiniz. 
-
-Diğer bir konu ise emailinizi en etkili şekilde kullanmak. Mesela TOEFL sonucunuz geldi, tarattınız ve bilgisayarınızda var. Hemen kendinize ya da bir başka emailinize konu başlığı ``TOEFL SCORE REPORT PDF'' olan bir mail atın. Bu sayede internet erişiminiz olan her yerde email hizmetinizin arama kısmını kullanarak kolayca sonuç pdf'nizi bulup bir yerlere upload edebilir ya da email ile iletebilirsiniz. Keyword kullanımı çok önemli. Mesela alakasız bir yerdeyim, bir okuldan ``TOEFL gelmemiş gönderebilir misiniz?'' dediler. Hemen aramamı yaptım bunu forwardladım iki saniyede: ``Beyin bedava''. 
-
-Ayrıca hocalara mail atarken okul mail adresinizi kullanmaızı tavsiye ediyorum. Eğer kullandığınız mail hizmetinde kullanıcı adınız isim ve soyadınızdan çok farklı ise (Örnek: crazyboy85@gmail, iwannadoPhD@gmail) maillerinizin spam'i boylaması muhtemel olacaktır. Okul mailimi kullanarak attığım mailler, gmail'ime göre cevap süresi farkedilebilir oranlarda azaldı. (4-5 günden, 1-2 güne). "Okul mail sistemimiz çok kötü kullanasım gelmiyor.'' diyorsanız, maili gmail'inize yönlendirebilir oradan mail alışverişinde bulunabilirsiniz. Diğer bir tavsiyem ise "*@*.edu'' adreslerinden gelen maillerin spam klasörünüze düşmesini engellemeniz. Bunu mail sağlayıcınızın filtre ayarlarını, mailin geldiği kısma "*@*.edu'' yazıp bu mailleri spam klasörüne düşmeyecek şekilde düzenlemek. ("*''lar her türlü edu ile biten mailleri anlatmak için kullanılmıştır.)
-
-Başvuracağınız okullardaki hocalara mail atıp fikir sorma işini ise Kasım-Aralık aylarına doğru yapmanız daha iyi olacaktır. Çünkü adamlara mailinizde bahsedebileceğiniz sınav sonuçlarınız vs. gibi bilgiler de elinize geçmiş olur. Fakat şunu da unutmayın, muhtemelen 10 milyon Çinli de o hocaya mail atıyor olacaktır. 
-
-Ayrıca başvurularda transkript isteniyor. Eğer 5 taneden fazla için para yatırırsanız iki katı kadar veriliyor. 10 parası yatırıp 20 tane aldım ve onlarla başvuruları yaptım.  
-
-Başvuruların belgelerini yollama işlerine gelince, birkaç gün önceden gidip FEDEX ya da DHL'den adres formlarını alın evde doldurup mekana o şekilde gidin. Böylece yollama işlerini hızlandırabilirsiniz. FEDEX'in daha iyi çalıştığını ve daha ucuz olduğunu gördük, bize öyle denk gelmiş de olabilir. FEDEX’in merkezi güney girişindeki otobüs durağının orada bulunan HİSAR COPY. Bu arada belirtilmesinde fayda olan diğer bir nokta ne kadar çok gönderimi aynı anda yaparsanız toplam gönderim masrafınızın o kadar düşeceği. Toplu gönderimlerde indirim yapıyorlar. 
 %
 %
 %
 \newpage
-\subsection{Başvuru Masrafları}
-Okullara başvurmak ve sonrası oldukça masraflı bir iş.  
-
-Başvurduğunuz okul sayısından bağımsız masraflar: 
+\section{Başvuru Masrafları}
+Okullara başvurmak ve sonrası oldukça masraflı bir iş. Başvurduğunuz okul sayısından bağımsız masraflar: 
 \begin{center}
 \begin{tabular*}{0.5\textwidth}{@{\extracolsep{\fill}}  l r}
 TOEFL & 185\$ \\
@@ -293,30 +321,67 @@ Transkript gönderme masrafı & 19 Euro \\
 \end{tabular*} \\
 \end{center}
 
-
-Burada masrafları biraz olsun azaltmak için dikkat edilmesi gereken birkaç nokta var. Örneğin TOEFL ve GRE'ye başvururken veya sınavdan hemen sonra 4 okula skor gönderme işini ücretsiz yapabiliyorsunuz. Ayrıca GRE + Subject sonuçlarını beraber gönderebilirsiniz. 15 okula başvurduğunuzu varsayarsak (vize ücretleri hariç) yaklaşık ortalama $180+190+160+75*15+17*11+23*11+19*1.4*15=2494\$ $. Vize ile ilgili ücretleri de hesaba kattığımızda bu rakam 2860\$ gibi rakamlara ulaşabiliyor. 
+Burada masrafları biraz olsun azaltmak için dikkat edilmesi gereken birkaç nokta var. Örneneğin TOEFL ve GRE’ye başvururken veya sınavdan hemen sonra dört okula skor gönderme işini ücretsiz yapabiliyorsunuz. Ayrıca GRE + Subject sonuçlarını beraber gönderebilirsiniz. Onbeş okula başvurduğunuzu varsayarsak (vize ücretleri hariç)  yaklaşık ortalama $180+190+160+75*15+17*11+23*11+19*1.4*15=2494\$ $. Vize ile ilgili ücretleri de hesaba kattığımızda bu rakam 2860\$ gibi rakamlara ulaşabiliyor. 
 \newpage
+%
+% Avrupa
+%
+\chapter{Avrupa'ya Doktora Başvurusu}
+Avrupa'ya doktora başvurusu yaparken iki tipte üniversite/enstitütü ile karşılaşmanız olası. Bunlardan ilki başvuru sistemi ve tarihi Amerika'ya benzeyen üniversiteler (Büyük Britanya üniversitelerinin çoğu, ETH, Zurich gibi üniversiteler) ve benzemeyen üniversiteler. Ben bu kısımda başvuru süreci Amerika'daki üniversitelere benzemeyen doktora programlarına değineceğim. Bu iki grup arasındaki en önemli iki fark başvuru tarihleri ve başvuru için izlemeniz gereken prosedürler. Bu kısmı okurken enstitü ve üniversite kelimelerinin bilinçli olarak birbirinden ayrılmış olmasına dikkat edin. Enstitütü başvuruları çoğu zaman bir üniversite tüzüğüne bağlı olmadığı ve personel alımı gibi değerlendirildiği için üniversite başvurularından farklı olabiliyor. 
+
+\section{Avrupa ve Amerika başvurularının tarih farklılıkları}
+
+Önce başvuru tarihlerini ele alalım çünkü hem Amerika'ya hem Avrupa'ya başvuruyorsanız, başvurularınızı iyi kordine etmeniz gerekiyor. Amerika'daki üniversitelere başvurular genelde sonbahar,kış döneminde yapılır ve cevaplar bahar gibi gelir. Bunu takiben, eğer kabul aldıysanız bu kabule 15 Nisan'a kadar bir cevap vermeniz gerekir. Avrupa'daki enstitü ve üniversitelerin başvuruları ise yıl içersinde farklı zamanlarda olabilir. Hatta yılın her diliminde başvuracak bir yer bulabilmeniz olası. Mesela örnek vermek gerekirse Max-Planck Mathematics in the Sciences enstitütüsüne her mevsim başvurabiliyorsunuz. Yine Aarhus Üniversitesi yılın farklı zamanlarında başvurular kabul ediyor, İtalya'daki Pisa Üniversitesi başvurularını yazın kabul ediyor, İtalya'daki SISSA enstitüsü ilk baharda ve yazın başvuruları değerlendiriyor, Berlin Matematik Okulu'nun başvuru zamanı ise Amerikadakilere yakın.
+
+\section{Avrupa ve Amerika başvuru tarihlerini ayarlamak}
+
+Avrupa başvuruları ile ilgili ilk sorun burda ortaya çıkıyor. Avrupa'daki pek çok üniversite ve enstitü'nün başvuruları baharda başlamakta. Dolayısıyla siz Avrupa'da yaptığınız başvuruların sonuçlarının 15 Nisan'dan önce belli olmaması riski doğuyor.  Amerika'daki üniversiteler yüzlerce, belki binlerce başvuruyu değerlendirdiği için onların değerlendirme süreci oldukça otomat ve bürokratik ve hatta 15 Nisan'dan geç cevap verme gibi bir opsiyonunuz hiç bir üniversitede yok. Öte yandan "önce kabul edeyim sonra vaz geçerim" derseniz de akademik açıdan pek yakışık almayan bir hareket olduğu için ilerde başınıza sorun olabilir. Bu durumda yapabileceğiniz en iyi şey Avrupa'daki üniversitelerle anlaşmak oluyor. Mesela Amerika'ya başvurularınız bittikten sonra Avrupa'da başvuru süreci baharda olan SISSA, Max Planck, Ludwig Maximillian (LUM) gibi enstitü ve üniversitelere başvurduğunuzu düşünelim. Aslında başvuruları oluruna bırakırsanız muhtemelen bunların hepsi Mayıs, Haziran gibi sonuçları açıklayacaktır. Fakat başvuruyu yaptığınız Profesörlere (evet orda sisteme değil başvuruları Profesörlere gönderiyordiğiniz de oluyor) mail atarak, değerlendirme işini hızlandırıp hızlandıramayacaklarını sorabilirsiniz. Bu konuda özellikle enstitülerden olumlu yanıt almanız ve başvuru sonucunuzun 15 Nisandan önce açıklanması oldukça olası. Dolayısıyla hem Avrupa hem de Amerikaya başvuracaksanız eğer yapabileceğiniz şeyler, 
+
+1. Avrupa başvurularının bahardan geç olmamasına dikkat etmek ve 
+
+2. eğer kesin olarak Amerika'ya gitmeyecekseniz Avrupa'daki yerlere 15 Nisandan önce cevap verip vermeyeceklerini sormaktır. 
+
+Eğer yaptığınız başvuru ne kadar sistematik ve otomatlaşmış gözüküyorsa (yani Amerika başvurularına ne kadar benziyorsa), belirlenen tarihler ve kurallar dışına çıkma ihtimalleri  o kadar az oluyor. Ayrıca yukarda yazdığım üzere enstitülere doktora başvuru süreci, daha çok personel alımı gibi işlediği için ve bir üniversite tüzüğüne bağlı olmadığı için esnek davranmaları daha olası. 
+
+\section{Avrupa'ya Başvuru sürecindeki farklılıklar}
+
+Başvuru tarihleri ile ilgili farkı açıkladıktan sonra başvuru sürecindeki farklara geçebiliriz. İlk dikkat etmeniz gereken nokta, Avrupa'da doktoraya öğrenci alan pek çok enstitütü ve üniversite Master yapmış olmanızı istiyor. Eğer Master yapmamışsanız, oraya doktora başvurusu yaptığınız zaman sizi genelde oranın Master programına yönlendiriyorlar. 
+
+Diğer bir farkta başvuru ortamı ile ilgili. Bu rehberin diğer kısımlarında yazdığı üzere Amerika'daki üniversitelere başvuru genelde website üzerinden ve oldukça benzer arayüzler aracılığı ile yapılmakta. Avrupa'da böyle bir ortak sistem yok malesef, hatta aynı şehirdeki farklı üniversitelerin bile başvuru süreci farklı olabiliyor. Özellikle doktora'ya başvuruyorsanız da bir akademisyen ile temasa geçmenizde fayda var ve hatta zaman zaman tavsiye bile ediliyor (örnek Berlin Matematik Okulu). Başvurular websitesi üzerinden olabileceği gibi, çalışmak istediğiniz profesörlere e-posta ile evraklarınızı göndermek şeklinde de olabiliyor. 
+
+Her ne kadar Avrupa'daki çoğu başvurunun kendine özgü sistemi olması başda zorlayıcı gözükse de, ortalama bir Avrupa başvurusunun aldığı süre, ortalama bir Amerika başvurusunun aldığı süreden çok daha kısa. Genelde CV, SOP, transcript gibi temel belgeleri bir siteye yüklemek (veya birine e-posta atmak) ve basit kişisel bilgiler girmekle ile işiniz bitiyor. Amerika'daki gibi her bir başvuru sabır testi haline dönüşmüyor. Bir diğer iyi yanı da GRE, GRE subject (ve hatta İngilizce ders veren bir okuldan mezun olduysanız TOEFL) gibi test skorlarını istememeleri ve başvuru ücreti almamaları. Dolayısıyla bir başvuru ortalama bir kargo parasına ve hatta yer yer bedavaya bile halledilebiliyor. Buna karşılık Avrupa başvurularının hoşunuza gitmeyecek bir tarafı genelde mülakat yapılması. Mülakatı eğer imkanınız yoksa Skype'dan eğer imkanınız varsa sizi davet ederek yapıyorlar. 
+
+\subsection{Mülakat}
+
+Mülakat konusuna biraz detaylı değinmekte fayda var. Eğer sözlüleri seven biri değilseniz, ilk bir kaç mülakat sizin için gerici olabilir ama genelde bir tane iyi mülakattan sonra kendinize güveniniz baya artıyor (dolayısıyla mülakatlardan size en iyimser gözükeni önce yapmaya çalışın). Mülakata genel kariyer sorularından başlayıp sonra daha spesifik bilim sorularına geçiyorlar. Fizik, matematik gibi dallar için konuşursak, sordukları sorular genelde çok hesap istemeyen ve mümkün olduğunca konsepte dayalı sorular oluyor. Mesela kuantum mekaniğinden, "Schrodinger denkleminin ikinci derece olmasından ötürü iki çözüm olması gerekirken neden hep bir tek çözüm dikkate alınıyor, diğer çözümün göz ardı edilmesinin sebebi nedir" gibi bir fizik sorusu veya basit Morse teoriden "Küre üzerine bir yükseklik fonksiyonu tanımladığın zaman bundaki kritik noktaları nasıl sınıflandırırsın, gradyan akış eğrilerinin bu sınıflandırma ile alakası nedir" gibi sorular gelebiliyor. Arada spesifik bir "partition" fonksiyonunu açık bir şekilde ifade etmek için geometrik bir seriyi görüp kapalı halini kullanmayı akıl etmeniz gerektirecek derecede hesap isteyen sorular da gelebiliyor. Ayrıca eğer Master yapmış biri iseniz, sizden Master tezinizi kısaca açıklamanızı da isteyebiliyorlar. Bu noktada bir şeyi belirtmekte fayda var. Size mülakat yapmadan önce verdiğiniz başvuru evraklarını inceliyorlar. Yani mesela CV'inize yazdığınız herşeyden sorumlusunuz. Mesela katıldığınız ve ders notlarını latex'e geçirdiğiniz bir Morse teori'ye giriş dersini CV'nize yazdığınızı var sayalım. Bu durumda Max-Planck'ta size mülakat yapan profesörlerden biri, mülakat sırasında kendisinin de Morse teori çalıştığını ve CV'inizde bunu gördüğü için size o konudan biraz soru sormak istediğini söyleyebilir. Kısacası sırf dikkat çeksin diye emin olmadığınız bir konu üzerine CV'inize birşeyler yazmanızı tavsiye etmem. Buna rağmen mülakat öncesi dökümanlarınızı incelemiş olmalarının iyi bir yanı da var. Eğer sizin başvurunuzu beğendiyseler genelde mülakat sırasında sordukları sorular da takıldığınızda sizi yönlendiriyorlar ve daha anlayışlı davranıyorlar.
+
+\section{Doktora Kadro İlanları}
+
+Bahsedilmesi  gereken bir nokta da Avrupa'daki her enstitünün başvuru zamanlarını önceden belirli olmaması sorunu. Avrupa'daki enstitülerin çoğu doktora öğrencisi alımını iş kadrosuna başvuru olarak değerlendiriyor. Bir örnek olarak Korteweg-de Vries matematiksel fizik enstitüsüne başvurmak istiyorsanız, sene boyunca kadro açıldı mı açılmadı mı diye takip etmeniz gerekiyor. Bunun sebebi de böyle durumlarda  sitelere ne zaman kadro açılacağı ile ilgili bilgi yazılmadığı olabiliyor (Max Planck genelde yazıyor). Bu durumda dediğim gibi ya sürekli siteyi kontrol etmeniz gerekiyor ya da alternatif olarak o enstitüde çalışmak istediğiniz profesörlerden biri ile iletişime geçip, kadro açılma ihtimalini ve tahmini zamanının sorabilirsiniz. 
+
+\section{Doktora Dili}
+
+Son olarak değinilmesi gereken bir nokta tabi ki eğitim dili. Avrupa'da başvuru yapacağınız zaman eğer bir üniversitenin, normal bir doktora veya master programına başvuruyorsanız, eğitim dilinin de o ülkenin dili ile aynı olma olasılığı çok yüksek (ders alacağınızı var sayarsak). Fakat eğer Max Planck ve SISSA gibi bir enstitüye veya bir üniversitenin özel bir programına (mesela LUM - Elite Master Program in Mathematical Physics veya Berlin Matematik Okulu) başvuruyorsanız onların eğitim dilini ingilizce olma olasılığı çok yüksek. Başvurularınızı yaparken, ilgili kişilerle iletişime geçip bu konuda da bilgi almanızı tavsiye ederim, zira yüksek lisans dersleri zor olduğu için bilmediğiniz bir dilde takip etmeniz zor olabilir. 
+
 %
 % Kabul sonrasi
 %
-\section{Kabul Sonrası}
-\subsection{Askerlik İşleri}
+\chapter{Kabul Sonrası}
+\section{Askerlik İşleri}
 
-Askerlik şubesine mümkün olduğunca erken gitmeye çalışın. İçeriye cep telefonu alınmıyor ancak telefonu kapalı şekilde oraya emanet edebiliyorsunuz. 8.30'da iş başı yapılıyor ve o saatte kimsecikler olmuyor. Ancak fotokopici daha geç açıldığından ışıkların yan tarafında bulunan Adliye'de fotokopi çektirebilirsiniz. İşlemler için 4 adet vesikalik, 4 diploma (arkalı önlü), ve 4 adet arkalı önlü nüfus cüzdanı fotokopisi gerekiyor. Vesikalığınızın size benziyor olmasına ve çokeski olmamasına dikkat edin. Ayrıca Nüfus Cüzdanınız eskiyse fotonuz küçüklükten kalmaysa, şubede işleminizi yapanların moduna göre reddedilebilirsiniz. Bunun riskine girmemek için nüfus cüzdanınızı yeniletebilirsiniz. Muhtarlıktan alacağınız bir kağıt aldıktan sonra sonra nüfus müdürlüğüne gitmeniz gerek. Ufak bir cüzdan masrafı alıyorlar o kadar. Muhtarlıktan kağıt almadan giderseniz yanınızda ikinci bir kimlik olmasını isteyebilirler. Bunun için pasaport veya ehliyet kullanabilirsiniz. Nüfus müdürlükleri Kaymakamlıklar'da bulunuyor. Beşiktaş ilçesindeki, Çırağan Sarayı\-'nın karşısında Emniyet Müdürlüğüne gelmeden önce. 
+Askerlik şubesine mümkün olduğunca erken gitmeye çalışın. İçeriye cep telefonu alınmıyor ancak telefonu kapalı şekilde oraya emanet edebiliyorsunuz. 8.30’da iş başı yapılıyor ve o saatte kimsecikler olmuyor. Ancak fotokopici daha geç açıldığından ışıkların yan tarafında bulunan adliyede fotokopi çektirebilirsiniz. İşlemler için dört adet vesikalik, dört diploma (arkalı önlü) ve dört adet arkalı önlü nüfus cüzdanı fotokopisi gerekiyor. Vesikalığınızın size benziyor olmasına ve çok eski olmamasına dikkat edin. Ayrıca nüfus cüzdanınız eskiyse fotonuz küçüklükten kalmaysa, şubede işleminizi yapanların moduna göre reddedilebilirsiniz. Bunun riskine girmemek için nüfus cüzdanınızı yeniletebilirsiniz. Muhtarlıktan bir kağıt aldıktan sonra nüfus müdürlüğüne gidip ufak bir cüzdan masrafı karşılığında –o dakikada- nüfus cüzdanınızı yeniletebilirsiniz. Muhtarlıktan kağıt almadan giderseniz yanınızda ikinci bir kimlik olmasını isteyebilirler. Bunun için pasaport veya ehliyet kullanabilirsiniz. Nüfus müdürlükleri kaymakamlıklarda bulunuyor. Beşiktaş ilçesindeki, Çırağan Sarayı’nın karşısında emniyet müdürlüğüne gelmeden önce. 
 
-Sıra numaranızı aldıktan sonra görevli sizi bina içindeki şubeye yönlendiriyor. Orada işlemlerinizi tamamladiktan sonra (imzalar, ailenle sorunun var mı, komando olmak ister misin gibi çeşitli sorular vs.) sizi hastaneye sevk edecekler. Zarfınizı alıp hastanenin yolunu tutuyorsunuz. Yine sahil yolunu takiben Kasımpaşa Askeri hastanesi bulunmakta. Hastanede kapıda sizi yönlendiriyorlar.Binaya girdikten sonra, danışmaya size verilen zarf ile başvuruyorsunuz. Orada ilk imzayı aldıktan sonra görevli sizi diğer hekime yönlendiriyor. Sizi yönlendirdikleri birim, ameliyat vs. nedeniyle o saatte açık değilse ya da bir başka nedenle çok dolu ise, görevliye ``başka bir birim imzalayabilir mi'' derseniz daha boş bir yere yönlendiriyorlar. Doktor size şöyle bir bakıp ``tamam iyisin'' diyor ve işlem bitiyor. Fazla kilo ya da başka sorunlarınız varsa belirli bir birime yönlendirebilirler. (Arkadaşı önce geri şubeye yeni belgeler almaya oradan da iç hastalıklara yönlendirdiler. Bu yüzden kilo veya başka bir probleminiz varsa yanınızda mutlaka fazladan fotoğrafınız bulunsun. Mümkünse 8-10 tane.) Sonrasında baştabibin sırasına girip görevli askere evraklarınizı veriyorsunuz, o toplu sekilde imzalatip getiriyor. Sonra tekrar askerlik şubesine geri dönüyorsunuz. 
+Askerlik şubesine dönersek, sıra numaranızı aldıktan sonra görevli sizi bina içindeki şubeye yönlendiriyor. Orada işlemlerinizi tamamladıktan sonra (imzalar, ailenle sorunun var mı, komando olmak ister misin gibi çeşitli sorular vs.) sizi hastaneye sevk edecekler. Zarfınızı alıp hastanenin yolunu tutuyorsunuz. Yine sahil yolunu takip ederseniz, Kasımpaşa Askeri Hastanesi’ne ulaşırsınız. Hastane kapısında sizi yönlendiriyorlar. 
+Binaya girdikten sonra, danışmaya size verilen zarfla başvuruyorsunuz. Orada ilk imzayı aldıktan sonra görevli sizi diğer hekime yönlendiriyor. Sizi yönlendirdikleri birim, ameliyat vs. nedeniyle o saatte açık değilse ya da bir başka nedenle çok doluysa, görevliye “başka bir birim imzalayabilir mi” derseniz daha boş bir yere yönlendiriyorlar. Doktor size şöyle bir bakıp “tamam iyisin” diyor ve işlem bitiyor. Fazla kilo ya da başka sorunlarınız varsa belirli bir birime yönlendirebilirler. (Arkadaşı önce geri şubeye yeni belgeler almaya oradan da iç hastalıklara yönlendirdiler. Bu yüzden kilo veya başka bir probleminiz varsa yanınızda mutlaka fazladan fotoğrafınız bulunsun. Mümkünse sekiz on tane.) Sonrasında baştabibin sırasına girip görevli askere evraklarınızı veriyorsunuz, o toplu şekilde imzalatıp getiriyor. Sonra tekrar askerlik şubesine geri dönüyorsunuz. Askerlik şubesinde sıra numarası vs. almadan direkt sizinle ilgilenen memura gidip belgelerinizi veriyorsunuz. Birkaç imza sonrasında size verilen belgeyi alıp mutlu bir şekilde evinize dönebilirsiniz.
 
-Askerlik şubesinde sıra numarası vs. almadan direkt sizinle ilgilenen memura gidip veriyorsunuz belgelerinizi, birkaç imza sonrasında size verilen belgeyi alıp, mutlu şekilde evinize dönebilirsiniz. 
 
-\subsection{Pasaport İşleri}
-Yeni pasaport almak için, öncelikle internetten e-pasaport.gov.tr adresini kullanarak size en yakın Emniyet Müdürlüğü'nden randevu almanız gerekiyor. Bizim zamanımızda randevu almayanları da sıraya alabiliyorlardı ancak bu işlemler tamamen online sisteme geçeceği ve tam saatinde sizi içeri alma avantajını kullanmak için online sistemi kullanın. Yeni defter ücretinizi, emniyete gitmeden önce Ziraat Bankası'na yatırmanız gerekiyor. Diğer bankalara yatırılan paralar kabul edilmiyor. Yeni çekilmiş 5*5 boyutlarında vesikalık götürmeniz gerekiyor. Avrupa için vize alınan gibi değil! Amerikan vizesi için gereken ile aynı. Başvuruya giderken varsa eski geçerli pasaportunuzu da götürüp onun iptalini de orada gerçekleştiriyorsunuz. Nüfus cüzdanınızı da unutmayın. Online randevu aldığınız internet sayfasında neler gerektiğinin listesini bulabilirsiniz. Ayrıca ne kadar senelik alacağınıza göre değişen pasaport harç makbuzunuzu da yanınızda götürmeniz gerekli. Doktora için gidecekler 5 senelik ücretsiz alma şansını kullanabilir. Bunun nasıl olacağı bir başka paragrafta açıklanıyor, biraz sabredin. Yeni düzenleme ile 10 senelik pasaport da alabiliyorsunuz ancak bunu ücretsiz alma şansınız ne yazık ki yok. 10 senelik almak isteyebilirsiniz çünkü yeni çipli pasaportların kullanma süresi dolduktan sonra yeniden uzatılamıyor ve yeni bir defter veriliyor. (Ağustos 2010 için geçerli bir düzenleme). Ayrıca Üniversite Kabul Mektubu’nuzu yanınızda götürmeyi unutmayın Pasaport başvurumu Beşiktaş İlçe Emniyet Müdürlüğü’nde gerçekleştirdim. Sıra ve hizmet Şişli’ye göre daha iyi. 
+\section{Pasaport İşleri}
+Yeni pasaport almak için, öncelikle internetten “e-pasaport.gov.tr” adresini kullanarak size en yakın emniyet müdürlüğünden randevu almanız gerekiyor. Bizim zamanımızda randevu almayanları da sıraya alabiliyorlardı ancak bu işlemlerin tamamen online sisteme geçeceği söyleniyor. Ayrıca tam saatinde işlem yapma avantajını kullanmak için online sistemi kullanın. Yeni defter ücretinizi, emniyete gitmeden önce Ziraat Bankası’na yatırmanız gerekiyor. Diğer bankalara yatırılan paralar kabul edilmiyor. Yeni çekilmiş beşe beş boyutlarında vesikalık götürmeniz gerekiyor. Avrupa için vize alınan gibi değil! Amerikan vizesi için gerekenle aynı. Başvuruya giderken varsa eski geçerli pasaportunuzu da götürüp onun iptalini de orada gerçekleştiriyorsunuz. Nüfus cüzdanınızı da unutmayın. Online randevu aldığınız internet sayfasında neler gerektiğinin listesini bulabilirsiniz. Ayrıca ne kadar senelik alacağınıza göre değişen pasaport harç makbuzunuzu da yanınızda götürmeniz gerekli. Doktora için gidecekler beş senelik ücretsiz alma şansını kullanabilir. Bunun nasıl olacağı bir başka paragrafta açıklanıyor, biraz sabredin. Yeni düzenlemeyle on senelik pasaport da alabiliyorsunuz ancak bunu ücretsiz alma şansınız ne yazık ki yok. On senelik almak isteyebilirsiniz çünkü yeni çipli pasaportların kullanma süresi dolduktan sonra yeniden uzatılamıyor ve yeni bir defter veriliyor. (Ağustos 2010 için geçerli bir düzenleme). Ayrıca Üniversite Kabul Mektubu’nuzu yanınızda götürmeyi unutmayın pasaport başvurumu Beşiktaş İlçe Emniyet Müdürlüğü’nde gerçekleştirdim. Sıra ve hizmet Şişli’ye göre daha iyi.
 
-Çipli pasaport başvurunuz sonrasında 7-10 işgünü içerisinde evinize postalanıyor ve imzanız ile almanız gerekiyor. 
+Çipli pasaport başvurunuz sonrasında yedi on işgünü içerisinde evinize postalanıyor ve imzanızla almanız gerekiyor. Öğrenci olduğunuz ve eğitim / kültür amacıyla gittiğiniz için harç masrafı ödemeniz gerekmiyor. Pasaport harcından muaf olabilmek için yapılması gerekenlerden bahsedeceğim. Vergi Dairesi tecrübeleri kişiden kişiye çok değişiyor çeşitli örneklerden bahsedeceğim. Ben Boğaziçi’den aldığım “Bu öğrenci doktoraya gidecektir, harçtan muaf olsun” şeklindeki yazı, kabul mektubum ve nüfus cüzdanımla gitmiştim. Adamlar Boğaziçi’nden aldığım yazının geçerli olmadığını çünkü artık o üniversiteyle ilişkim kalmadığını, kabul mektubunun yeminli tercümesini getirmem gerektiğini belirttiler. Tercümeyle gelirsen beş yıl ücretsiz veririz dediler. Anlaşıldığı üzere vergi dairesinde işler günden güne ve orada sizinle ilgilenen adama göre değişiyor. Ayrıca daha önce birçok arkadaş Boğaziçi’nden aldıkları “Bu öğrenci doktoraya gidecektir harçtan muaf olsun” yazısıyla gittiler vergi dairesine ve işlerini hallettiler. Yasaya göre kabul mektubunun çevirisi gerekiyor ve en fazla iki yıl ücretsiz pasaport hakkı verilebiliyor. Ama daha önce de dediğim gibi kişiden kişiye yasanın uygulaması değişiyor. Halihazırda pasaportunuz varsa bunu 2015 yılına kadar kullanabilirsiniz. Aynı şey emniyet müdürlüğüne vergi dairesinden götürdüğünüz kağıtta da geçerli. Emniyet kabul mektubunuzu isteyecek. Orijinalinin taranmış halinin print-out’u yeterli oluyor. Tercümeyi Şişli Adliyesi’nin etrafındaki tercüme bürolarında yaptırtabilirsiniz. Tüm mektubu çevirtmenize gerek yok, kabul edildiğiniz kısmı ve kaç sene süreciğini yazan kısımlar yeterli olacaktır. Ve tabii mektubu imzalayanın, kısım üniversitenin isminin kısımlarını da atlamayın. İki paragraf için yaklaşık 15 TL tutuyor. (Haziran 2010)
 
-Öğrenci olduğunuz ve eğitim/kültür amacıyla gittiğiniz için harç masrafı ödemeniz gerekmiyor. Pasaport harcından muaf olabilmek için yapılması gerekenlerden bahsedeceğim. Vergi Dairesi tecrübeleri kişiden kişiye çok değişiyor çeşitli örneklerden bahsedeceğim. Ben Boğaziçi'den aldığım ``Bu öğrenci doktoraya gidecektir, harctan muaf olsun'' şeklindeki yazı, kabul mektubum ve nüfus cüzdanım ile gitmiştim. Adamlar Boğaziçi'nden aldığım yazının geçerli olmadığını çünkü artık o üniversite ile ilişkim kalmadığını, kabul mektubunun yeminli tercümesini getirmem gerektiğini belirttiler. Tercüme ile gelirsen 5 yıl ücretsiz veririz dediler. Anlaşıldığı üzere Vergi Dairesi\-nde işler günden güne ve orada sizin ile ilgilenen adama göre değişiyor. Ayrıca daha önce birçok arkadaş Boğaziçi'nden aldıkları ``Bu öğrenci doktoraya gidecektir harçtan muaf olsun'' yazısı ile gittiler Vergi Dairesi'ne ve işlerini hallettiler. Yasaya göre kabul mektubunun çevirisi gerekiyor ve en fazla 2 yıl ücretsiz pasaport hakkı verilebiliyor. Ama daha önce de dediğim gibi kişiden kişiye yasanın uygulaması değişiyor.  Halihazırda pasaportunuz varsa bunu 2015 yılına kadar kullanabilirsiniz. Aynı şey Emniyet Müdürlüğü'ne Vergi Dairesi'nden götürdüğünüz kağıtta da geçerli. Emniyet kabul mektubunuzu isteyecek. Orijinalinin taranmış halinin print-out'u yeterli oluyor. Tercümeyi Şişli Adliyesi'nin etrafındaki tercüme bürolarında yaptırtabilirsiniz. Tüm mektubu çevirtmenize gerek yok, kabul edildiğiniz kısmı ve kaç sene süreciğini yazan kisimlar yeterli olacaktır. Ve tabii mektubu imzalayanın, kısım üniversitenin isminin kısımlarını da atlamayın. İki paragraf için yaklaşık 15 TL tutuyor. (Haziran 2010) 
-
-\subsection{Vize İşleri}
-Amerika vize konusunda her şeyi sisteme oturtmuş, işler çok rahat yürüyor. Sitesinde yeterli açıklama, gerekli belgeler mevcut. Yapmanız gereken I-20 Formunuz geldikten ve pasaportunuzu aldıktan sonra en kısa zamanda DS160 formunu internetten doldurmak. Eskiden 3 ayrı form vardı, şimdi hepsini tek forma indirdiler. Oldukça uzun ve sıkıcı bir form. Kimlik bilgileri, daha önce bulunduğunuz ülkeler, sizi tanıyan insanlara ait bilgiler gibi çeşitli bölümleri mevcut. Bu formu doldururken en kilit nokta her sayfayı doldurduktan sonra ``save'' etmeniz. Zira arada webserver application pool'u restart olduğu için sizin bilgileriniz uçabilir. Ayrıca bu dosyayı saklarsanız sonraki vize basvurularınızda kullanabilirsiniz. (Örneğin; master’dan sonra doktora yaparken tekrar başvurmanız gerekiyor.) Vize formunu doldurduktan sonra SEVIS ücretini yatırmanız gerekiyor. SEVIS ücreti internette https://www.fmjfee.com/i901fee/ adresinden kart ile ödeniyor. Posta ile gelen dekonta gerek olmadan, ödedikten hemen sonraki çıktıyı vize mülakatı sırasında konsolosluğa götürebilirsiniz. Formu doldurup SEVIS'i yatırdıktan sonra yapmanız gereken konsoloslugu 0212-340-4444 telefonundan arayıp randevu almak. O zamanki yoğunluğa göre randevuyu 1 ay sonraya verebilirler. Şanslıysanız 3-4 gün sonraya da verebiliyorlar. Bu yüzden bu işleri önceden halletmekte fayda var. Konsolosluğa gitmek için Boğaziçi'nden taksiye binebilirsiniz. Yaklaşık 13 TL tutmuştu sanıyorum ki. Randevu saatiniz 9:15 ise siz 8:45'te orada olun çünkü çoğu zaman önceden alıyorlar. Konsolosluğa giderken yanınızda götürmeniz gereken birkaç şey var. Bunlardan biri DS160 formunu doldurduktan sonra karşınıza çıkan barkod sayfası. Eğer DS160 formuna resminizi ekleyemediyseniz yanınızda bir iki adet vesikalık da götürmeniz gerekiyor. Ayrıca okuldan gelen I20 formu, pasaport, SEVIS dekontu, transkriptleriniz de gerekli. Eğer okulunuzdan burs almıyorsanız okulun ilk senesine yetecek kadar paranızın olduğunu gösteren Banka Müşteri Temsilcisi tarafından imzalanan, bankanın antetli kağıdı üzerine İngilizce yazılmış Bank Statement. Bunun dışında tapu falan da götürebilirsiniz ama bakmıyorlar. Eğer bursunuz varsa fakat bursunuz 9 aylıksa sizden geri kalan 3 aylık kısmı da göstermenizi isteyebilirler. Bu da yaklaşık 6-7 bin dolar göstermeniz demek. Genelde I20, SEVIS, DS160 ve pasaport dışında hiçbir şeye bakmamaktadırlar. 
+\section{Vize İşleri}
+Amerika vize konusunda her şeyi sisteme oturtmuş, işler çok rahat yürüyor. Sitesinde yeterli açıklama, gerekli belgeler mevcut. Yapmanız gereken I-20 Formunuz geldikten ve pasaportunuzu aldıktan sonra en kısa zamanda DS160 formunu internetten doldurmak. Eskiden üç ayrı form vardı, şimdi hepsini tek forma indirdiler. Oldukça uzun ve sıkıcı bir form. Kimlik bilgileri, daha önce bulunduğunuz ülkeler, sizi tanıyan insanlara ait bilgiler gibi çeşitli bölümleri mevcut. Bu formu doldururken en kilit nokta her sayfayı doldurduktan sonra “save” etmeniz. Zira arada webserver application pool’u restart olduğu için sizin bilgileriniz uçabilir. Ayrıca bu dosyayı saklarsanız sonraki vize başvurularınızda kullanabilirsiniz. (Örneğin; master’dan sonra doktora yaparken tekrar başvurmanız gerekiyor.) Vize formunu doldurduktan sonra SEVIS ücretini yatırmanız gerekiyor. SEVIS ücreti internette https://www.fmjfee.com/i901fee/ adresinden kartla ödeniyor. Postayla gelen dekonta gerek olmadan, ödedikten hemen sonraki çıktıyı vize mülakatı sırasında konsolosluğa götürebilirsiniz. Formu doldurup SEVIS’i yatırdıktan sonra yapmanız gereken konsolosluğu 0212 340 44 44 telefonundan arayıp randevu almak. O zamanki yoğunluğa göre randevuyu bir ay sonraya verebilirler. Şanslıysanız üç dört gün sonraya da verebiliyorlar. Bu yüzden bu işleri önceden halletmekte fayda var. Konsolosluğa gitmek için Boğaziçi’nden taksiye binebilirsiniz. Yanlış hatırlamıyorsam yaklaşık 13 TL tutmuştu. Randevu saatiniz 9:15 ise siz 8:45’te orada olun çünkü çoğu zaman önceden alıyorlar. Konsolosluğa giderken yanınızda götürmeniz gereken birkaç şey var. Bunlardan biri DS160 formunu doldurduktan sonra karşınıza çıkan barkod sayfası. Eğer DS160 formuna resminizi ekleyemediyseniz yanınızda bir iki adet vesikalık da götürmeniz gerekiyor. Ayrıca okuldan gelen I20 formu, pasaport, SEVIS dekontu, transkriptleriniz de gerekli. Eğer okulunuzdan burs almıyorsanız okulun ilk senesine yetecek kadar paranızın olduğunu gösteren Banka Müşteri Temsilcisi tarafından imzalanan, bankanın antetli kağıdı üzerine İngilizce yazılmış Bank Statement. Bunun dışında tapu falan da götürebilirsiniz ama bakmıyorlar. Eğer bursunuz varsa fakat bursunuz dokuz aylıksa sizden geri kalan üç aylık kısmı da göstermenizi isteyebilirler. Bu da yaklaşık 6 - 7 bin dolar göstermeniz demek. Genelde I-20, SEVIS, DS160 ve pasaport dışında hiçbir şeye bakmamaktadırlar.
 %
 %
 %
