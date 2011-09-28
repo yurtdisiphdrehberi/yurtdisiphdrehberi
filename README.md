@@ -6,15 +6,14 @@ __Description:__
 	
 __Authors:__  
 	Onur Albayrak  
-	Mehmet Ali Anil
-	
+	Mehmet Ali Anil  
 	Ahmet Demir  
 	Veli Ugur Guney  
 	Ismail Volkan Inlek  
 	Bugra Kaytanli  
 	Alp Sipahigil  
 	Tuna Toksoz  
-	Sina Tureli
+	Sina Tureli  
 
 __Editor:__ 
 	Tolga Suna  
