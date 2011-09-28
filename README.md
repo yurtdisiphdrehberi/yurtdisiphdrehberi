@@ -6,7 +6,7 @@ __Description:__
 	
 __Authors:__  
 	Onur Albayrak  
-	Mehmet Ali Anil  
+	Mehmet Ali Anil
 	Ahmet Demir  
 	Veli Ugur Guney  
 	Ismail Volkan Inlek  
