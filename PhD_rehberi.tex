@@ -11,12 +11,22 @@
 \usepackage{hyperref}
 \usepackage[turkish]{babel}
 % end of Packages
+\usepackage[thmmarks]{ntheorem}
+
+\theoremstyle{break}
+\theorembodyfont{\normalfont}
+\theoremseparator{}
+\theoremindent1cm
+\theoremprework{\smallskip}
+\theorempostwork{\smallskip}
+\newtheorem{ornek}{Örnek}[section]
+
 
 \setlength{\parindent}{0pt}
 \setlength{\parskip}{2ex plus 0.5ex minus 0.2ex}
 
 
-\usepackage[normalsections,normalindent,normalleading,normalmargins]{savetrees}
+%\usepackage[normalsections,normalindent,normalleading,normalmargins]{savetrees}
 \usepackage{fullpage}
 \linespread{1} %Satir araliklarini ayarlar. özel olarak ;{\setlength{\baselineskip}
                                                         %{1.5\baselineskip}
@@ -210,7 +220,28 @@ Temelde okulların çoğu iki sınav istiyor. Biri İngilizce yeterliliğinizi �
 TOEFL dört bölümden oluşuyor: Reading, Listening, Writing ve Speaking. Hangi bölüm kaç sorudan oluşuyor hatırlamıyorum, fakat aralarda bonus sorular çıkabiliyor. Yani Listening’den otuz soru çıkması gerekirken kırkbeş soru çıkabilir. Bunların hangilerinin puanlanacağını sınav sırasında bilemiyoruz, fakat sınav çıkısında sizinle giren arkadaşlara sorarsanız kesişimi bulabilirsiniz. Reading klasik reading, sorular sırasında solda paragraf açık duruyor, yani parçayı önceden bir okuyayım notlar alayım yapmanıza gerek yok. Listening de normal listening. Bir şeyler dinliyorsunuz ve sonra sorulan sorulara cevap veriyorsunuz. Speaking kısmında not almak önemli. Speaking’de altı tane soru var. Bunların iki tanesi havadan sudan şeyler, “hayatında gördüğün en güzel kızı tanımla”, “en çok neden korkarsın” gibi şeyler. Kalanları “integrated” dediğimiz Listening ile birleştirip yapılacak sorular. Önemli olan yine not alabilmek. Speaking’te benim gördüğüm zaman doldurma için tekrar yapabilirsiniz. Her ne kadar kırkbeş saniye kısa gibi görünse de bazen söyleyecek bir şey gelmiyor. Bu durumda, “mm” diyip daha önce söylediğiniz bir cümleyi “paraphrase” edip zaman kazanabilirsiniz. Fakat bu tekrarları çok yapmayın, kafa ütülemeyin. Writing ise iki tane, biri klasik writing, konu veriliyor ve bununla ilgili orta uzunlukta bir essay yazmanız isteniyor. Diğeriyse yine integrated. TOEFL için çalışılabilecek üç dört kaynak var. Kaplan, Cambridge, Barron veya Longman. Yanlış hatırlamıyorsam Longman en kolayı. Daha sonra Kaplan, sonra Barron ve sonra da Cambridge. Ancak Barron’s gerçek sınava en yakın olan diyebilirim.
 
 \subsubsection{GRE General}
+\label{GREGeneral}
 GRE General çok boş bir sınav. Üç bölümden oluşuyor: Quantitative(Q), Verbal(V), Writing. Quantitative bizim lise seviyesinde, “$(3/2+1/5)*x=7$ ise $x$’in yarısı kaçtır?” şeklinde sorular. ÖSS çabukluğunu kaybettiğinizi düşünüyorsanız bir iki test çözün hem nasıl sorular olduğunu anlarsınız. En kıl tüy Q soruları grafikli olanlar, “yok grafiği nerede kesiyor, orası 75 civarı mı yoksa 77.5’un biraz üstü mü?” gibi mi sorular. GRE Verbal inanılmaz ezber isteyen bir bölüm. 3.600 tane kelimesi mi ne var, ezberle ezberle bitmez. O yüzden pek uğraşmayın. Writing önemli. İki tane writing var. Birinde konu veriliyor siz yazıyorsunuz, diğerindeyse bir adamın söylediği önermenin ve arkasındaki reasoning’in neden yanlış olduğunu yazdığınız bir essay. GRE General çalışmaya değecek bir şey değil, en azından temel bilimci olan gençlerimiz için. Mühendislik isteyenlerin biraz daha iyi olsa iyi olabilir belki.
+
+\subsubsection{Yeni GRE}
+GRE General sınavı, 2011 den itibaren değiştirilmiştir ve bu ara dönemde Revised GRE ya da New GRE olarak isimlendirilmektedir. Yeni GRE'nin \emph{Quantitive Analysis} Sayısal bölümlere başvuran okurlarımız için çok büyük değişiklikler yok. Eski GRE'de bulunan her şey yenisinde de var, bunun haricinde konular da aynı kalmış. Uygulanan tek değişiklik ise, size sorulan 20 sorudan 3-5 tanesinin şıklı olmaması. Bu sorularda ya bir kutucuğa problemin çözümünü yazmanız, ya da sunulan şıklardan birkaçını işaretlemeniz isteniyor. Ayrıca sınava bir ekran hesap makinesi eklenmiş, kendisine bence soruların cevaplarını kontrol etmek haricinde çok gerek yok. Soruların zorluk derecesi aynı, dolayısıyla bu bölümde eski GRE'deki gibi çok iyi bir sonuç getirmeniz gerekiyor.
+
+Sınavda daha belirgin değişen kısım ise Verbal Reasoning kısmı. Burada, eski GRE deki gibi kelimelerde eşanlamlılığı, zıtlığı soran sorularda kelimeler yerine cümleleri odak alan soruların sayısı arttırılmış.  Örnek \ref{NewGREOrnek} de göründüğü gibi \emph{Verbal Reasoning} kısmında sadece kelime çalışarak, eşanlamlıları ve zıt anlamlıları ezberleyerek iyi puan almak zorlaştırılmış, ve okuduğunu anlayan, kelimelerin arasındaki ince farkları kavrayan kişiler ise ödüllendirilmiş. Cümle tamamlama sorularında çok boşluklu sorular da mevcut, bu sorular yüksek katsayılılar ve boşlukların hepsi doğru doldurulmadığı sürece puan alınamıyor. Birden fazla şıkkın doğru olduğu sorular bu bölüme de yeni konulmuş.
+
+\begin{ornek}
+\label{NewGREOrnek}
+\textbf{Eski tip sorular:}\\
+``Athlete:Trophy::'' ilişkisi aşağıdaki şıklardan hangisinde bulunur? \\
+``Sterilize:'' kelimesinin zıt anlamlısı aşağıdaki şıklardan hangisidir?
+
+\textbf{Yeni tip sorular:}\\
+``Although it does contain some pioneering ideas, one would hardly characterize the work as \hspace*{1cm}.'' cümlesinde yerleştirildiğinde anlamlı bir cümle oluşturacak eş anlamlı şıklar hangileridir?
+\end{ornek}
+
+Analytical Writing denilen iki adet makalede yazana verilen süre eskiden 30 dakika ve 45 dakika iken, artık ikisini de 30 dakikada yazmanız isteniyor.
+
+2011 sonu itibari ile genel kanı, Quantitative kısmındaki değişikliklerin sonunda alacağınız notu pek etkilemeyeceği. Verbal kısmının zorlaştığı kanısı da oldukça akla yatkın, zira artık önce kelime ezberleyip sonra bunları cümlede iyi kullanacak şekle girmelisiniz. Sınav yenilendi diye bölüm \ref{GREGeneral} de kararınızı değiştirmeye gerek yok, fakat Verbal'a çalışmayı  düşünüyorsanız yeni kaynaklardan çalışmanız yararınıza olur.
+
 
 \subsubsection{GRE Subject}
 GRE Subject sınavı senede üç kere yapılıyor; Ekim, Kasım ve Nisan aylarında. "Ekim ayındaki sınavın sonucunu öğreneyim ona göre Kasım ayında sınavı tekrar alırım" deme şansınız olmuyor çünkü kayıtlar sınavdan neredeyse bir ay önce kapanıyor.
